@@ -4,7 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codebethel — Software Development & Consulting</title>
-  <meta name="description" content="Codebethel delivers expert software development and consulting. Based in Portugal, serving teams across Europe and beyond.">
+  <meta name="description" content="Codebethel delivers expert software development and consulting. A distributed team serving clients across Europe and beyond.">
+  <meta name="keywords" content="software development, consulting, full-stack development, performance optimization, architecture, refactoring, TypeScript, React, Node.js, Python, PostgreSQL, technical consulting, Europe">
+  <meta name="author" content="Codebethel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://codebethel.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://codebethel.com/">
+  <meta property="og:title" content="Codebethel — Software Development & Consulting">
+  <meta property="og:description" content="We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:site_name" content="Codebethel">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Codebethel — Software Development & Consulting">
+  <meta name="twitter:description" content="We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable.">
+
+  <!-- Hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="en" href="https://codebethel.com/">
+  <link rel="alternate" hreflang="pt" href="https://codebethel.com/">
+  <link rel="alternate" hreflang="pt-BR" href="https://codebethel.com/">
+  <link rel="alternate" hreflang="de" href="https://codebethel.com/">
+  <link rel="alternate" hreflang="x-default" href="https://codebethel.com/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Codebethel",
+    "url": "https://codebethel.com",
+    "description": "Expert software development and consulting. A distributed team serving clients across Europe and beyond.",
+    "email": "angelo@codebethel.com",
+    "areaServed": "Europe",
+    "serviceType": ["Software Development", "Technical Consulting", "Performance Optimization", "Architecture & Refactoring", "Full-Stack Development"],
+    "knowsLanguage": ["en", "pt", "de"],
+    "sameAs": [
+      "https://www.linkedin.com/in/angelo-lencina/"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -303,6 +349,33 @@
     .contact-info-item a { color: var(--accent); text-decoration: none; }
     .contact-info-item a:hover { text-decoration: underline; }
 
+    /* ---------- WHATSAPP FAB ---------- */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 99;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+    .whatsapp-fab svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
     /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
@@ -347,6 +420,7 @@
 <body>
 
   <!-- NAV -->
+  <header>
   <nav>
     <div class="nav-inner">
       <a href="#" class="logo">code<span>bethel</span></a>
@@ -359,6 +433,7 @@
           <div class="lang-switcher">
             <button class="lang-btn active" onclick="setLang('en')">EN</button>
             <button class="lang-btn" onclick="setLang('pt')">PT</button>
+            <button class="lang-btn" onclick="setLang('pt-BR')">BR</button>
             <button class="lang-btn" onclick="setLang('de')">DE</button>
           </div>
         </li>
@@ -366,16 +441,18 @@
       <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('show')" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
+  </header>
 
+  <main>
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <div class="badge" data-i18n="hero_badge">Software Development & Consulting</div>
       <h1 data-i18n="hero_title">Engineering that solves the hard problems.</h1>
-      <p data-i18n="hero_sub">I build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. Based in Portugal, working with teams across Europe.</p>
+      <p data-i18n="hero_sub">We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.</p>
       <div class="cta-group">
         <a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Let's Connect</a>
-        <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">See What I Do</a>
+        <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">See What We Do</a>
       </div>
     </div>
   </section>
@@ -384,8 +461,8 @@
   <section id="services">
     <div class="container">
       <div class="section-label" data-i18n="services_label">Services</div>
-      <h2 data-i18n="services_title">What I bring to the table</h2>
-      <p class="section-sub" data-i18n="services_sub">From diagnosis to delivery — I take ownership of the parts most engineers avoid.</p>
+      <h2 data-i18n="services_title">What we bring to the table</h2>
+      <p class="section-sub" data-i18n="services_sub">From diagnosis to delivery — we take ownership of the parts most engineers avoid.</p>
       <div class="grid-3">
         <div class="card">
           <div class="card-icon">&#9881;</div>
@@ -395,7 +472,7 @@
         <div class="card">
           <div class="card-icon">&#128269;</div>
           <h3 data-i18n="svc2_title">Complex Problem Diagnosis</h3>
-          <p data-i18n="svc2_desc">Cascading state failures, performance degradation at scale, integration conflicts — I trace issues to their root and implement solutions that last.</p>
+          <p data-i18n="svc2_desc">Cascading state failures, performance degradation at scale, integration conflicts — we trace issues to their root and implement solutions that last.</p>
         </div>
         <div class="card">
           <div class="card-icon">&#128736;</div>
@@ -410,7 +487,7 @@
         <div class="card">
           <div class="card-icon">&#128640;</div>
           <h3 data-i18n="svc5_title">Technical Consulting</h3>
-          <p data-i18n="svc5_desc">Strategic advice on architecture decisions, tech debt management, and scaling challenges. I help teams make better engineering choices.</p>
+          <p data-i18n="svc5_desc">Strategic advice on architecture decisions, tech debt management, and scaling challenges. We help teams make better engineering choices.</p>
         </div>
         <div class="card">
           <div class="card-icon">&#129309;</div>
@@ -427,10 +504,10 @@
       <div class="about-grid">
         <div class="about-text">
           <div class="section-label" data-i18n="about_label">About</div>
-          <h2 data-i18n="about_title">Senior Software Developer</h2>
-          <p data-i18n="about_p1">My work sits at the intersection of clean architecture and real-world constraints. I don't just fix symptoms — I trace issues to their root and implement solutions that last.</p>
-          <p data-i18n="about_p2">I've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and I apply consistent engineering principles regardless of the domain.</p>
-          <p data-i18n="about_p3">That versatility is something I've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made me a more complete developer and a stronger collaborator.</p>
+          <h2 data-i18n="about_title">Software Development Team</h2>
+          <p data-i18n="about_p1">Our work sits at the intersection of clean architecture and real-world constraints. We don't just fix symptoms — we trace issues to their root and implement solutions that last.</p>
+          <p data-i18n="about_p2">We've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and we apply consistent engineering principles regardless of the domain.</p>
+          <p data-i18n="about_p3">That versatility is something we've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made us a more complete team and stronger collaborators.</p>
         </div>
         <div class="stats">
           <div class="stat">
@@ -447,7 +524,7 @@
           </div>
           <div class="stat">
             <span class="stat-number">EU</span>
-            <span class="stat-label" data-i18n="stat_location">Based in Portugal</span>
+            <span class="stat-label" data-i18n="stat_location">Team across Europe</span>
           </div>
         </div>
       </div>
@@ -458,7 +535,7 @@
   <section id="tech">
     <div class="container">
       <div class="section-label" data-i18n="tech_label">Tech Stack</div>
-      <h2 data-i18n="tech_title">Tools I work with</h2>
+      <h2 data-i18n="tech_title">Tools we work with</h2>
       <p class="section-sub" data-i18n="tech_sub">Domain-agnostic engineering with a focus on what gets the job done right.</p>
       <div class="tech-tags">
         <span class="tech-tag">TypeScript</span>
@@ -486,7 +563,7 @@
     <div class="container">
       <div class="section-label" data-i18n="contact_label">Contact</div>
       <h2 data-i18n="contact_title">Let's build something great</h2>
-      <p class="section-sub" data-i18n="contact_sub">Have a complex project or need an engineer who takes ownership? Reach out.</p>
+      <p class="section-sub" data-i18n="contact_sub">Have a complex project or need a team that takes ownership? Reach out.</p>
       <div class="contact-grid">
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div>
@@ -499,7 +576,7 @@
           </div>
           <div>
             <label for="message" data-i18n="form_message">Message</label>
-            <textarea id="message" name="message" data-i18n-placeholder="form_message_ph" placeholder="Tell me about your project..." required></textarea>
+            <textarea id="message" name="message" data-i18n-placeholder="form_message_ph" placeholder="Tell us about your project..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:fit-content;" data-i18n="form_submit">Send Message</button>
         </form>
@@ -510,20 +587,31 @@
           </div>
           <div class="contact-info-item">
             <h4 data-i18n="info_location">Location</h4>
-            <p>Portugal, EU</p>
+            <p data-i18n="info_location_desc">Distributed team across Europe</p>
           </div>
           <div class="contact-info-item">
             <h4 data-i18n="info_availability">Availability</h4>
-            <p data-i18n="info_availability_desc">Open to freelance, contract, and consulting engagements across European and international teams.</p>
+            <p data-i18n="info_availability_desc">Open to freelance, contract, and consulting engagements with European and international teams.</p>
+          </div>
+          <div class="contact-info-item">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/5551999505437" target="_blank" rel="noopener noreferrer" data-i18n="info_whatsapp">Message on WhatsApp</a></p>
           </div>
           <div class="contact-info-item">
             <h4>LinkedIn</h4>
-            <p><a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" data-i18n="info_linkedin">Connect on LinkedIn</a></p>
+            <p><a href="https://www.linkedin.com/in/angelo-lencina/" target="_blank" rel="noopener noreferrer" data-i18n="info_linkedin">Connect on LinkedIn</a></p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  </main>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/5551999505437" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
   <footer>
     <p data-i18n="footer">&copy; 2026 Codebethel. All rights reserved.</p>
@@ -539,47 +627,49 @@
         nav_contact: "Contact",
         hero_badge: "Software Development & Consulting",
         hero_title: "Engineering that solves the hard problems.",
-        hero_sub: "I build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. Based in Portugal, working with teams across Europe.",
+        hero_sub: "We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.",
         hero_cta1: "Let's Connect",
-        hero_cta2: "See What I Do",
+        hero_cta2: "See What We Do",
         services_label: "Services",
-        services_title: "What I bring to the table",
-        services_sub: "From diagnosis to delivery — I take ownership of the parts most engineers avoid.",
+        services_title: "What we bring to the table",
+        services_sub: "From diagnosis to delivery — we take ownership of the parts most engineers avoid.",
         svc1_title: "Performance Optimization",
         svc1_desc: "Rethinking data flows, reducing unnecessary processing, and restructuring component boundaries to make your application faster — not just shippable.",
         svc2_title: "Complex Problem Diagnosis",
-        svc2_desc: "Cascading state failures, performance degradation at scale, integration conflicts — I trace issues to their root and implement solutions that last.",
+        svc2_desc: "Cascading state failures, performance degradation at scale, integration conflicts — we trace issues to their root and implement solutions that last.",
         svc3_title: "Architecture & Refactoring",
         svc3_desc: "Modernizing legacy codebases without disrupting existing behavior. Clean architecture applied to real-world constraints.",
         svc4_title: "Full-Stack Development",
         svc4_desc: "End-to-end product engineering across geospatial systems, document generation, business platforms, authentication, and real-time data sync.",
         svc5_title: "Technical Consulting",
-        svc5_desc: "Strategic advice on architecture decisions, tech debt management, and scaling challenges. I help teams make better engineering choices.",
+        svc5_desc: "Strategic advice on architecture decisions, tech debt management, and scaling challenges. We help teams make better engineering choices.",
         svc6_title: "Team Integration",
         svc6_desc: "Fluent in Portuguese, English, and German. Comfortable in distributed, cross-functional environments across European and international teams.",
         about_label: "About",
-        about_title: "Senior Software Developer",
-        about_p1: "My work sits at the intersection of clean architecture and real-world constraints. I don't just fix symptoms — I trace issues to their root and implement solutions that last.",
-        about_p2: "I've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and I apply consistent engineering principles regardless of the domain.",
-        about_p3: "That versatility is something I've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made me a more complete developer and a stronger collaborator.",
+        about_title: "Software Development Team",
+        about_p1: "Our work sits at the intersection of clean architecture and real-world constraints. We don't just fix symptoms — we trace issues to their root and implement solutions that last.",
+        about_p2: "We've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and we apply consistent engineering principles regardless of the domain.",
+        about_p3: "That versatility is something we've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made us a more complete team and stronger collaborators.",
         stat_years: "Years Experience",
         stat_projects: "Projects Delivered",
         stat_lang: "Trilingual",
-        stat_location: "Based in Portugal",
+        stat_location: "Team across Europe",
         tech_label: "Tech Stack",
-        tech_title: "Tools I work with",
+        tech_title: "Tools we work with",
         tech_sub: "Domain-agnostic engineering with a focus on what gets the job done right.",
         contact_label: "Contact",
         contact_title: "Let's build something great",
-        contact_sub: "Have a complex project or need an engineer who takes ownership? Reach out.",
+        contact_sub: "Have a complex project or need a team that takes ownership? Reach out.",
         form_name: "Name",
         form_name_ph: "Your name",
         form_message: "Message",
-        form_message_ph: "Tell me about your project...",
+        form_message_ph: "Tell us about your project...",
         form_submit: "Send Message",
         info_location: "Location",
+        info_location_desc: "Distributed team across Europe",
         info_availability: "Availability",
-        info_availability_desc: "Open to freelance, contract, and consulting engagements across European and international teams.",
+        info_availability_desc: "Open to freelance, contract, and consulting engagements with European and international teams.",
+        info_whatsapp: "Message on WhatsApp",
         info_linkedin: "Connect on LinkedIn",
         footer: "\u00a9 2026 Codebethel. All rights reserved."
       },
@@ -590,98 +680,155 @@
         nav_contact: "Contacto",
         hero_badge: "Desenvolvimento de Software & Consultoria",
         hero_title: "Engenharia que resolve os problemas dif\u00edceis.",
-        hero_sub: "Construo aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Baseado em Portugal, a trabalhar com equipas por toda a Europa.",
+        hero_sub: "Constru\u00edmos aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Uma equipa distribu\u00edda a trabalhar com clientes por toda a Europa e al\u00e9m.",
         hero_cta1: "Vamos Conversar",
-        hero_cta2: "Ver O Que Fa\u00e7o",
+        hero_cta2: "Ver O Que Fazemos",
         services_label: "Servi\u00e7os",
-        services_title: "O que trago para a mesa",
-        services_sub: "Do diagn\u00f3stico \u00e0 entrega \u2014 assumo a responsabilidade pelas partes que a maioria dos engenheiros evita.",
+        services_title: "O que trazemos para a mesa",
+        services_sub: "Do diagn\u00f3stico \u00e0 entrega \u2014 assumimos a responsabilidade pelas partes que a maioria dos engenheiros evita.",
         svc1_title: "Otimiza\u00e7\u00e3o de Performance",
         svc1_desc: "Repensar fluxos de dados, reduzir processamento desnecess\u00e1rio e reestruturar fronteiras de componentes para tornar a sua aplica\u00e7\u00e3o mais r\u00e1pida \u2014 n\u00e3o apenas entreg\u00e1vel.",
         svc2_title: "Diagn\u00f3stico de Problemas Complexos",
-        svc2_desc: "Falhas de estado em cascata, degrada\u00e7\u00e3o de performance em escala, conflitos de integra\u00e7\u00e3o \u2014 tra\u00e7o os problemas at\u00e9 \u00e0 raiz e implemento solu\u00e7\u00f5es duradouras.",
+        svc2_desc: "Falhas de estado em cascata, degrada\u00e7\u00e3o de performance em escala, conflitos de integra\u00e7\u00e3o \u2014 tra\u00e7amos os problemas at\u00e9 \u00e0 raiz e implementamos solu\u00e7\u00f5es duradouras.",
         svc3_title: "Arquitetura & Refactoring",
         svc3_desc: "Modernizar codebases legadas sem comprometer o comportamento existente. Arquitetura limpa aplicada a restri\u00e7\u00f5es do mundo real.",
         svc4_title: "Desenvolvimento Full-Stack",
         svc4_desc: "Engenharia de produto de ponta a ponta em sistemas geoespaciais, gera\u00e7\u00e3o de documentos, plataformas de neg\u00f3cio, autentica\u00e7\u00e3o e sincroniza\u00e7\u00e3o de dados em tempo real.",
         svc5_title: "Consultoria T\u00e9cnica",
-        svc5_desc: "Aconselhamento estrat\u00e9gico sobre decis\u00f5es de arquitetura, gest\u00e3o de d\u00edvida t\u00e9cnica e desafios de escala. Ajudo equipas a fazer melhores escolhas de engenharia.",
+        svc5_desc: "Aconselhamento estrat\u00e9gico sobre decis\u00f5es de arquitetura, gest\u00e3o de d\u00edvida t\u00e9cnica e desafios de escala. Ajudamos equipas a fazer melhores escolhas de engenharia.",
         svc6_title: "Integra\u00e7\u00e3o em Equipas",
         svc6_desc: "Fluente em Portugu\u00eas, Ingl\u00eas e Alem\u00e3o. Confort\u00e1vel em ambientes distribu\u00eddos e multifuncionais em equipas europeias e internacionais.",
         about_label: "Sobre",
-        about_title: "Senior Software Developer",
-        about_p1: "O meu trabalho est\u00e1 na interse\u00e7\u00e3o entre arquitetura limpa e restri\u00e7\u00f5es do mundo real. N\u00e3o resolvo apenas sintomas \u2014 tra\u00e7o os problemas at\u00e9 \u00e0 raiz e implemento solu\u00e7\u00f5es que duram.",
-        about_p2: "Liderei iniciativas de refactoring que modernizam codebases legadas sem comprometer o comportamento existente, e aplico princ\u00edpios de engenharia consistentes independentemente do dom\u00ednio.",
-        about_p3: "Essa versatilidade \u00e9 algo que constru\u00ed intencionalmente. Adaptar-me a diferentes contextos t\u00e9cnicos e de neg\u00f3cio mantendo o mesmo rigor de engenharia tornou-me um developer mais completo e um melhor colaborador.",
+        about_title: "Equipa de Desenvolvimento de Software",
+        about_p1: "O nosso trabalho est\u00e1 na interse\u00e7\u00e3o entre arquitetura limpa e restri\u00e7\u00f5es do mundo real. N\u00e3o resolvemos apenas sintomas \u2014 tra\u00e7amos os problemas at\u00e9 \u00e0 raiz e implementamos solu\u00e7\u00f5es que duram.",
+        about_p2: "Lider\u00e1mos iniciativas de refactoring que modernizam codebases legadas sem comprometer o comportamento existente, e aplicamos princ\u00edpios de engenharia consistentes independentemente do dom\u00ednio.",
+        about_p3: "Essa versatilidade \u00e9 algo que constru\u00edmos intencionalmente. Adaptarmo-nos a diferentes contextos t\u00e9cnicos e de neg\u00f3cio mantendo o mesmo rigor de engenharia tornou-nos uma equipa mais completa e melhores colaboradores.",
         stat_years: "Anos de Experi\u00eancia",
         stat_projects: "Projetos Entregues",
         stat_lang: "Trilingue",
-        stat_location: "Baseado em Portugal",
+        stat_location: "Equipa pela Europa",
         tech_label: "Tecnologias",
-        tech_title: "Ferramentas com que trabalho",
+        tech_title: "Ferramentas com que trabalhamos",
         tech_sub: "Engenharia agnóstica ao domínio com foco no que funciona bem.",
         contact_label: "Contacto",
         contact_title: "Vamos construir algo grande",
-        contact_sub: "Tem um projeto complexo ou precisa de um engenheiro que assume responsabilidade? Entre em contacto.",
+        contact_sub: "Tem um projeto complexo ou precisa de uma equipa que assume responsabilidade? Entre em contacto.",
         form_name: "Nome",
         form_name_ph: "O seu nome",
         form_message: "Mensagem",
-        form_message_ph: "Conte-me sobre o seu projeto...",
+        form_message_ph: "Conte-nos sobre o seu projeto...",
         form_submit: "Enviar Mensagem",
         info_location: "Localização",
+        info_location_desc: "Equipa distribuída pela Europa",
         info_availability: "Disponibilidade",
         info_availability_desc: "Disponível para freelance, contrato e consultoria com equipas europeias e internacionais.",
+        info_whatsapp: "Enviar mensagem no WhatsApp",
+        info_linkedin: "Conectar no LinkedIn",
+        footer: "\u00a9 2026 Codebethel. Todos os direitos reservados."
+      },
+      "pt-BR": {
+        nav_services: "Servi\u00e7os",
+        nav_about: "Sobre",
+        nav_stack: "Tecnologias",
+        nav_contact: "Contato",
+        hero_badge: "Desenvolvimento de Software & Consultoria",
+        hero_title: "Engenharia que resolve os problemas dif\u00edceis.",
+        hero_sub: "Constru\u00edmos aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Um time distribu\u00eddo trabalhando com clientes por toda a Europa e al\u00e9m.",
+        hero_cta1: "Vamos Conversar",
+        hero_cta2: "Veja O Que Fazemos",
+        services_label: "Servi\u00e7os",
+        services_title: "O que trazemos para a mesa",
+        services_sub: "Do diagn\u00f3stico \u00e0 entrega \u2014 assumimos a responsabilidade pelas partes que a maioria dos engenheiros evita.",
+        svc1_title: "Otimiza\u00e7\u00e3o de Performance",
+        svc1_desc: "Repensar fluxos de dados, reduzir processamento desnecess\u00e1rio e reestruturar fronteiras de componentes para tornar a sua aplica\u00e7\u00e3o mais r\u00e1pida \u2014 n\u00e3o apenas entreg\u00e1vel.",
+        svc2_title: "Diagn\u00f3stico de Problemas Complexos",
+        svc2_desc: "Falhas de estado em cascata, degrada\u00e7\u00e3o de performance em escala, conflitos de integra\u00e7\u00e3o \u2014 tra\u00e7amos os problemas at\u00e9 a raiz e implementamos solu\u00e7\u00f5es duradouras.",
+        svc3_title: "Arquitetura & Refatora\u00e7\u00e3o",
+        svc3_desc: "Modernizar codebases legados sem comprometer o comportamento existente. Arquitetura limpa aplicada a restri\u00e7\u00f5es do mundo real.",
+        svc4_title: "Desenvolvimento Full-Stack",
+        svc4_desc: "Engenharia de produto de ponta a ponta em sistemas geoespaciais, gera\u00e7\u00e3o de documentos, plataformas de neg\u00f3cio, autentica\u00e7\u00e3o e sincroniza\u00e7\u00e3o de dados em tempo real.",
+        svc5_title: "Consultoria T\u00e9cnica",
+        svc5_desc: "Aconselhamento estrat\u00e9gico sobre decis\u00f5es de arquitetura, gest\u00e3o de d\u00edvida t\u00e9cnica e desafios de escala. Ajudamos times a fazer melhores escolhas de engenharia.",
+        svc6_title: "Integra\u00e7\u00e3o em Times",
+        svc6_desc: "Fluentes em Portugu\u00eas, Ingl\u00eas e Alem\u00e3o. Confort\u00e1veis em ambientes distribu\u00eddos e multifuncionais em times europeus e internacionais.",
+        about_label: "Sobre",
+        about_title: "Time de Desenvolvimento de Software",
+        about_p1: "Nosso trabalho est\u00e1 na interse\u00e7\u00e3o entre arquitetura limpa e restri\u00e7\u00f5es do mundo real. N\u00e3o resolvemos apenas sintomas \u2014 tra\u00e7amos os problemas at\u00e9 a raiz e implementamos solu\u00e7\u00f5es que duram.",
+        about_p2: "Lideramos iniciativas de refatora\u00e7\u00e3o que modernizam codebases legados sem comprometer o comportamento existente, e aplicamos princ\u00edpios de engenharia consistentes independentemente do dom\u00ednio.",
+        about_p3: "Essa versatilidade \u00e9 algo que constru\u00edmos intencionalmente. Nos adaptar a diferentes contextos t\u00e9cnicos e de neg\u00f3cio mantendo o mesmo rigor de engenharia nos tornou um time mais completo e melhores colaboradores.",
+        stat_years: "Anos de Experi\u00eancia",
+        stat_projects: "Projetos Entregues",
+        stat_lang: "Tril\u00edngue",
+        stat_location: "Time pela Europa",
+        tech_label: "Tecnologias",
+        tech_title: "Ferramentas com que trabalhamos",
+        tech_sub: "Engenharia agn\u00f3stica ao dom\u00ednio com foco no que funciona bem.",
+        contact_label: "Contato",
+        contact_title: "Vamos construir algo grande",
+        contact_sub: "Tem um projeto complexo ou precisa de um time que assume responsabilidade? Entre em contato.",
+        form_name: "Nome",
+        form_name_ph: "Seu nome",
+        form_message: "Mensagem",
+        form_message_ph: "Conte-nos sobre o seu projeto...",
+        form_submit: "Enviar Mensagem",
+        info_location: "Localiza\u00e7\u00e3o",
+        info_location_desc: "Time distribu\u00eddo pela Europa",
+        info_availability: "Disponibilidade",
+        info_availability_desc: "Dispon\u00edveis para freelance, contrato e consultoria com times europeus e internacionais.",
+        info_whatsapp: "Enviar mensagem no WhatsApp",
         info_linkedin: "Conectar no LinkedIn",
         footer: "\u00a9 2026 Codebethel. Todos os direitos reservados."
       },
       de: {
         nav_services: "Leistungen",
-        nav_about: "\u00dcber mich",
+        nav_about: "\u00dcber uns",
         nav_stack: "Technologien",
         nav_contact: "Kontakt",
         hero_badge: "Softwareentwicklung & Beratung",
         hero_title: "Engineering, das die schwierigen Probleme l\u00f6st.",
-        hero_sub: "Ich entwickle komplexe, produktionsreife Anwendungen, bei denen Performance, Skalierbarkeit und Wartbarkeit nicht verhandelbar sind. Basiert in Portugal, t\u00e4tig mit Teams in ganz Europa.",
+        hero_sub: "Wir entwickeln komplexe, produktionsreife Anwendungen, bei denen Performance, Skalierbarkeit und Wartbarkeit nicht verhandelbar sind. Ein verteiltes Team, t\u00e4tig mit Kunden in ganz Europa und dar\u00fcber hinaus.",
         hero_cta1: "Kontakt aufnehmen",
-        hero_cta2: "Meine Leistungen",
+        hero_cta2: "Unsere Leistungen",
         services_label: "Leistungen",
-        services_title: "Was ich mitbringe",
-        services_sub: "Von der Diagnose bis zur Lieferung \u2014 ich \u00fcbernehme Verantwortung f\u00fcr die Teile, die die meisten Ingenieure vermeiden.",
+        services_title: "Was wir mitbringen",
+        services_sub: "Von der Diagnose bis zur Lieferung \u2014 wir \u00fcbernehmen Verantwortung f\u00fcr die Teile, die die meisten Ingenieure vermeiden.",
         svc1_title: "Performance-Optimierung",
         svc1_desc: "Datenfl\u00fcsse \u00fcberdenken, unn\u00f6tige Verarbeitung reduzieren und Komponentengrenzen umstrukturieren, um Ihre Anwendung schneller zu machen \u2014 nicht nur auslieferbar.",
         svc2_title: "Komplexe Problemdiagnose",
-        svc2_desc: "Kaskadierende Zustandsfehler, Performance-Degradation im gro\u00dfen Ma\u00dfstab, Integrationskonflikte \u2014 ich verfolge Probleme bis zur Wurzel und implementiere dauerhafte L\u00f6sungen.",
+        svc2_desc: "Kaskadierende Zustandsfehler, Performance-Degradation im gro\u00dfen Ma\u00dfstab, Integrationskonflikte \u2014 wir verfolgen Probleme bis zur Wurzel und implementieren dauerhafte L\u00f6sungen.",
         svc3_title: "Architektur & Refactoring",
         svc3_desc: "Legacy-Codebases modernisieren, ohne bestehendes Verhalten zu beeintr\u00e4chtigen. Saubere Architektur unter realen Einschr\u00e4nkungen.",
         svc4_title: "Full-Stack-Entwicklung",
         svc4_desc: "End-to-End-Produktentwicklung \u00fcber Geoinformationssysteme, Dokumentengenerierung, Gesch\u00e4ftsplattformen, Authentifizierung und Echtzeit-Datensynchronisation.",
         svc5_title: "Technische Beratung",
-        svc5_desc: "Strategische Beratung zu Architekturentscheidungen, Tech-Debt-Management und Skalierungsherausforderungen. Ich helfe Teams, bessere Engineering-Entscheidungen zu treffen.",
+        svc5_desc: "Strategische Beratung zu Architekturentscheidungen, Tech-Debt-Management und Skalierungsherausforderungen. Wir helfen Teams, bessere Engineering-Entscheidungen zu treffen.",
         svc6_title: "Team-Integration",
         svc6_desc: "Flie\u00dfend in Portugiesisch, Englisch und Deutsch. Erfahren in verteilten, funktions\u00fcbergreifenden Umgebungen mit europ\u00e4ischen und internationalen Teams.",
-        about_label: "\u00dcber mich",
-        about_title: "Senior Software Developer",
-        about_p1: "Meine Arbeit liegt an der Schnittstelle zwischen sauberer Architektur und realen Einschr\u00e4nkungen. Ich behebe nicht nur Symptome \u2014 ich verfolge Probleme bis zur Wurzel und implementiere L\u00f6sungen, die halten.",
-        about_p2: "Ich habe Refactoring-Initiativen geleitet, die Legacy-Codebases modernisieren, ohne bestehendes Verhalten zu beeintr\u00e4chtigen, und wende konsistente Engineering-Prinzipien unabh\u00e4ngig von der Dom\u00e4ne an.",
-        about_p3: "Diese Vielseitigkeit habe ich bewusst aufgebaut. Die Anpassung an verschiedene technische und gesch\u00e4ftliche Kontexte bei gleichbleibender Engineering-Pr\u00e4zision hat mich zu einem vollst\u00e4ndigeren Entwickler und st\u00e4rkeren Teamplayer gemacht.",
+        about_label: "\u00dcber uns",
+        about_title: "Softwareentwicklungsteam",
+        about_p1: "Unsere Arbeit liegt an der Schnittstelle zwischen sauberer Architektur und realen Einschr\u00e4nkungen. Wir beheben nicht nur Symptome \u2014 wir verfolgen Probleme bis zur Wurzel und implementieren L\u00f6sungen, die halten.",
+        about_p2: "Wir haben Refactoring-Initiativen geleitet, die Legacy-Codebases modernisieren, ohne bestehendes Verhalten zu beeintr\u00e4chtigen, und wenden konsistente Engineering-Prinzipien unabh\u00e4ngig von der Dom\u00e4ne an.",
+        about_p3: "Diese Vielseitigkeit haben wir bewusst aufgebaut. Die Anpassung an verschiedene technische und gesch\u00e4ftliche Kontexte bei gleichbleibender Engineering-Pr\u00e4zision hat uns zu einem st\u00e4rkeren Team gemacht.",
         stat_years: "Jahre Erfahrung",
         stat_projects: "Projekte geliefert",
         stat_lang: "Dreisprachig",
-        stat_location: "Basiert in Portugal",
+        stat_location: "Team in ganz Europa",
         tech_label: "Technologien",
-        tech_title: "Werkzeuge, mit denen ich arbeite",
+        tech_title: "Werkzeuge, mit denen wir arbeiten",
         tech_sub: "Dom\u00e4nen-unabh\u00e4ngiges Engineering mit Fokus auf das, was funktioniert.",
         contact_label: "Kontakt",
         contact_title: "Lassen Sie uns etwas Gro\u00dfartiges bauen",
-        contact_sub: "Haben Sie ein komplexes Projekt oder brauchen einen Ingenieur, der Verantwortung \u00fcbernimmt? Melden Sie sich.",
+        contact_sub: "Haben Sie ein komplexes Projekt oder brauchen ein Team, das Verantwortung \u00fcbernimmt? Melden Sie sich.",
         form_name: "Name",
         form_name_ph: "Ihr Name",
         form_message: "Nachricht",
-        form_message_ph: "Erz\u00e4hlen Sie mir von Ihrem Projekt...",
+        form_message_ph: "Erz\u00e4hlen Sie uns von Ihrem Projekt...",
         form_submit: "Nachricht senden",
         info_location: "Standort",
+        info_location_desc: "Verteiltes Team in ganz Europa",
         info_availability: "Verf\u00fcgbarkeit",
         info_availability_desc: "Offen f\u00fcr Freelance-, Vertrags- und Beratungsengagements mit europ\u00e4ischen und internationalen Teams.",
+        info_whatsapp: "Nachricht auf WhatsApp",
         info_linkedin: "Auf LinkedIn verbinden",
         footer: "\u00a9 2026 Codebethel. Alle Rechte vorbehalten."
       }
@@ -692,6 +839,7 @@
 
     function detectLanguage() {
       const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      if (browserLang === 'pt-br') return 'pt-BR';
       if (browserLang.startsWith('pt')) return 'pt';
       if (browserLang.startsWith('de')) return 'de';
       return 'en';
@@ -721,13 +869,15 @@
       const titles = {
         en: 'Codebethel \u2014 Software Development & Consulting',
         pt: 'Codebethel \u2014 Desenvolvimento de Software & Consultoria',
+        "pt-BR": 'Codebethel \u2014 Desenvolvimento de Software & Consultoria',
         de: 'Codebethel \u2014 Softwareentwicklung & Beratung'
       };
       document.title = titles[lang];
 
       // Update active button
+      const btnMap = { en: 'EN', pt: 'PT', 'pt-BR': 'BR', de: 'DE' };
       document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+        btn.classList.toggle('active', btn.textContent === btnMap[lang]);
       });
 
       // Persist choice
