@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codebethel — Software Development & Consulting</title>
+  <meta name="description" content="Codebethel delivers expert software development and consulting. Based in Portugal, serving teams across Europe and beyond.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg-card: #12121a;
+      --border: #1e1e2e;
+      --text: #e4e4e7;
+      --text-muted: #9ca3af;
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.15);
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(16px);
+      background: rgba(10, 10, 15, 0.8);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    /* ---------- LANGUAGE SWITCHER ---------- */
+    .lang-switcher {
+      display: flex;
+      gap: 0.25rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.2rem;
+    }
+    .lang-btn {
+      padding: 0.3rem 0.65rem;
+      border: none;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover { color: var(--white); }
+    .lang-btn.active {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .hero-content { max-width: 720px; position: relative; z-index: 1; }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      background: var(--accent-glow);
+    }
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 0 24px var(--accent-glow);
+    }
+    .btn-primary:hover { filter: brightness(1.15); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--white); }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+    }
+
+    /* ---------- SERVICES GRID ---------- */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .card-icon {
+      width: 48px; height: 48px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.4rem;
+    }
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-text p { margin-bottom: 1.25rem; color: var(--text-muted); }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .stat {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+    }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* ---------- TECH ---------- */
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .tech-tag {
+      padding: 0.5rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--bg-card);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .tech-tag:hover { border-color: var(--accent); color: var(--white); }
+
+    /* ---------- CONTACT ---------- */
+    .contact-section { background: var(--bg-card); border-top: 1px solid var(--border); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    form { display: flex; flex-direction: column; gap: 1rem; }
+    label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+      resize: vertical;
+    }
+    input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+    textarea { min-height: 120px; }
+    .contact-info-item { margin-bottom: 1.5rem; }
+    .contact-info-item h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .contact-info-item p { color: var(--text-muted); font-size: 0.95rem; }
+    .contact-info-item a { color: var(--accent); text-decoration: none; }
+    .contact-info-item a:hover { text-decoration: underline; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 15, 0.95);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid var(--border);
+        gap: 1rem;
+      }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      section { padding: 4rem 1.25rem; }
+    }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">code<span>bethel</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#tech" data-i18n="nav_stack">Stack</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        <li>
+          <div class="lang-switcher">
+            <button class="lang-btn active" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('pt')">PT</button>
+            <button class="lang-btn" onclick="setLang('de')">DE</button>
+          </div>
+        </li>
+      </ul>
+      <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('show')" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge" data-i18n="hero_badge">Software Development & Consulting</div>
+      <h1 data-i18n="hero_title">Engineering that solves the hard problems.</h1>
+      <p data-i18n="hero_sub">I build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. Based in Portugal, working with teams across Europe.</p>
+      <div class="cta-group">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Let's Connect</a>
+        <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">See What I Do</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-label" data-i18n="services_label">Services</div>
+      <h2 data-i18n="services_title">What I bring to the table</h2>
+      <p class="section-sub" data-i18n="services_sub">From diagnosis to delivery — I take ownership of the parts most engineers avoid.</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">&#9881;</div>
+          <h3 data-i18n="svc1_title">Performance Optimization</h3>
+          <p data-i18n="svc1_desc">Rethinking data flows, reducing unnecessary processing, and restructuring component boundaries to make your application faster — not just shippable.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128269;</div>
+          <h3 data-i18n="svc2_title">Complex Problem Diagnosis</h3>
+          <p data-i18n="svc2_desc">Cascading state failures, performance degradation at scale, integration conflicts — I trace issues to their root and implement solutions that last.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128736;</div>
+          <h3 data-i18n="svc3_title">Architecture & Refactoring</h3>
+          <p data-i18n="svc3_desc">Modernizing legacy codebases without disrupting existing behavior. Clean architecture applied to real-world constraints.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#127760;</div>
+          <h3 data-i18n="svc4_title">Full-Stack Development</h3>
+          <p data-i18n="svc4_desc">End-to-end product engineering across geospatial systems, document generation, business platforms, authentication, and real-time data sync.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128640;</div>
+          <h3 data-i18n="svc5_title">Technical Consulting</h3>
+          <p data-i18n="svc5_desc">Strategic advice on architecture decisions, tech debt management, and scaling challenges. I help teams make better engineering choices.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#129309;</div>
+          <h3 data-i18n="svc6_title">Team Integration</h3>
+          <p data-i18n="svc6_desc">Fluent in Portuguese, English, and German. Comfortable in distributed, cross-functional environments across European and international teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label" data-i18n="about_label">About</div>
+          <h2 data-i18n="about_title">Senior Software Developer</h2>
+          <p data-i18n="about_p1">My work sits at the intersection of clean architecture and real-world constraints. I don't just fix symptoms — I trace issues to their root and implement solutions that last.</p>
+          <p data-i18n="about_p2">I've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and I apply consistent engineering principles regardless of the domain.</p>
+          <p data-i18n="about_p3">That versatility is something I've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made me a more complete developer and a stronger collaborator.</p>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label" data-i18n="stat_years">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label" data-i18n="stat_projects">Projects Delivered</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">EN/PT/DE</span>
+            <span class="stat-label" data-i18n="stat_lang">Trilingual</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">EU</span>
+            <span class="stat-label" data-i18n="stat_location">Based in Portugal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="tech">
+    <div class="container">
+      <div class="section-label" data-i18n="tech_label">Tech Stack</div>
+      <h2 data-i18n="tech_title">Tools I work with</h2>
+      <p class="section-sub" data-i18n="tech_sub">Domain-agnostic engineering with a focus on what gets the job done right.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Next.js</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">REST APIs</span>
+        <span class="tech-tag">GraphQL</span>
+        <span class="tech-tag">Docker</span>
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">CI/CD</span>
+        <span class="tech-tag">Git</span>
+        <span class="tech-tag">Redis</span>
+        <span class="tech-tag">GIS / Geospatial</span>
+        <span class="tech-tag">Real-time Systems</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-label" data-i18n="contact_label">Contact</div>
+      <h2 data-i18n="contact_title">Let's build something great</h2>
+      <p class="section-sub" data-i18n="contact_sub">Have a complex project or need an engineer who takes ownership? Reach out.</p>
+      <div class="contact-grid">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div>
+            <label for="name" data-i18n="form_name">Name</label>
+            <input type="text" id="name" name="name" data-i18n-placeholder="form_name_ph" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div>
+            <label for="message" data-i18n="form_message">Message</label>
+            <textarea id="message" name="message" data-i18n-placeholder="form_message_ph" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:fit-content;" data-i18n="form_submit">Send Message</button>
+        </form>
+        <div>
+          <div class="contact-info-item">
+            <h4>Email</h4>
+            <p><a href="mailto:angelolencina@gmail.com">angelolencina@gmail.com</a></p>
+          </div>
+          <div class="contact-info-item">
+            <h4 data-i18n="info_location">Location</h4>
+            <p>Portugal, EU</p>
+          </div>
+          <div class="contact-info-item">
+            <h4 data-i18n="info_availability">Availability</h4>
+            <p data-i18n="info_availability_desc">Open to freelance, contract, and consulting engagements across European and international teams.</p>
+          </div>
+          <div class="contact-info-item">
+            <h4>LinkedIn</h4>
+            <p><a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" data-i18n="info_linkedin">Connect on LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-i18n="footer">&copy; 2026 Codebethel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // ===== TRANSLATIONS =====
+    const translations = {
+      en: {
+        nav_services: "Services",
+        nav_about: "About",
+        nav_stack: "Stack",
+        nav_contact: "Contact",
+        hero_badge: "Software Development & Consulting",
+        hero_title: "Engineering that solves the hard problems.",
+        hero_sub: "I build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. Based in Portugal, working with teams across Europe.",
+        hero_cta1: "Let's Connect",
+        hero_cta2: "See What I Do",
+        services_label: "Services",
+        services_title: "What I bring to the table",
+        services_sub: "From diagnosis to delivery — I take ownership of the parts most engineers avoid.",
+        svc1_title: "Performance Optimization",
+        svc1_desc: "Rethinking data flows, reducing unnecessary processing, and restructuring component boundaries to make your application faster — not just shippable.",
+        svc2_title: "Complex Problem Diagnosis",
+        svc2_desc: "Cascading state failures, performance degradation at scale, integration conflicts — I trace issues to their root and implement solutions that last.",
+        svc3_title: "Architecture & Refactoring",
+        svc3_desc: "Modernizing legacy codebases without disrupting existing behavior. Clean architecture applied to real-world constraints.",
+        svc4_title: "Full-Stack Development",
+        svc4_desc: "End-to-end product engineering across geospatial systems, document generation, business platforms, authentication, and real-time data sync.",
+        svc5_title: "Technical Consulting",
+        svc5_desc: "Strategic advice on architecture decisions, tech debt management, and scaling challenges. I help teams make better engineering choices.",
+        svc6_title: "Team Integration",
+        svc6_desc: "Fluent in Portuguese, English, and German. Comfortable in distributed, cross-functional environments across European and international teams.",
+        about_label: "About",
+        about_title: "Senior Software Developer",
+        about_p1: "My work sits at the intersection of clean architecture and real-world constraints. I don't just fix symptoms — I trace issues to their root and implement solutions that last.",
+        about_p2: "I've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and I apply consistent engineering principles regardless of the domain.",
+        about_p3: "That versatility is something I've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made me a more complete developer and a stronger collaborator.",
+        stat_years: "Years Experience",
+        stat_projects: "Projects Delivered",
+        stat_lang: "Trilingual",
+        stat_location: "Based in Portugal",
+        tech_label: "Tech Stack",
+        tech_title: "Tools I work with",
+        tech_sub: "Domain-agnostic engineering with a focus on what gets the job done right.",
+        contact_label: "Contact",
+        contact_title: "Let's build something great",
+        contact_sub: "Have a complex project or need an engineer who takes ownership? Reach out.",
+        form_name: "Name",
+        form_name_ph: "Your name",
+        form_message: "Message",
+        form_message_ph: "Tell me about your project...",
+        form_submit: "Send Message",
+        info_location: "Location",
+        info_availability: "Availability",
+        info_availability_desc: "Open to freelance, contract, and consulting engagements across European and international teams.",
+        info_linkedin: "Connect on LinkedIn",
+        footer: "\u00a9 2026 Codebethel. All rights reserved."
+      },
+      pt: {
+        nav_services: "Servi\u00e7os",
+        nav_about: "Sobre",
+        nav_stack: "Tecnologias",
+        nav_contact: "Contacto",
+        hero_badge: "Desenvolvimento de Software & Consultoria",
+        hero_title: "Engenharia que resolve os problemas dif\u00edceis.",
+        hero_sub: "Construo aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Baseado em Portugal, a trabalhar com equipas por toda a Europa.",
+        hero_cta1: "Vamos Conversar",
+        hero_cta2: "Ver O Que Fa\u00e7o",
+        services_label: "Servi\u00e7os",
+        services_title: "O que trago para a mesa",
+        services_sub: "Do diagn\u00f3stico \u00e0 entrega \u2014 assumo a responsabilidade pelas partes que a maioria dos engenheiros evita.",
+        svc1_title: "Otimiza\u00e7\u00e3o de Performance",
+        svc1_desc: "Repensar fluxos de dados, reduzir processamento desnecess\u00e1rio e reestruturar fronteiras de componentes para tornar a sua aplica\u00e7\u00e3o mais r\u00e1pida \u2014 n\u00e3o apenas entreg\u00e1vel.",
+        svc2_title: "Diagn\u00f3stico de Problemas Complexos",
+        svc2_desc: "Falhas de estado em cascata, degrada\u00e7\u00e3o de performance em escala, conflitos de integra\u00e7\u00e3o \u2014 tra\u00e7o os problemas at\u00e9 \u00e0 raiz e implemento solu\u00e7\u00f5es duradouras.",
+        svc3_title: "Arquitetura & Refactoring",
+        svc3_desc: "Modernizar codebases legadas sem comprometer o comportamento existente. Arquitetura limpa aplicada a restri\u00e7\u00f5es do mundo real.",
+        svc4_title: "Desenvolvimento Full-Stack",
+        svc4_desc: "Engenharia de produto de ponta a ponta em sistemas geoespaciais, gera\u00e7\u00e3o de documentos, plataformas de neg\u00f3cio, autentica\u00e7\u00e3o e sincroniza\u00e7\u00e3o de dados em tempo real.",
+        svc5_title: "Consultoria T\u00e9cnica",
+        svc5_desc: "Aconselhamento estrat\u00e9gico sobre decis\u00f5es de arquitetura, gest\u00e3o de d\u00edvida t\u00e9cnica e desafios de escala. Ajudo equipas a fazer melhores escolhas de engenharia.",
+        svc6_title: "Integra\u00e7\u00e3o em Equipas",
+        svc6_desc: "Fluente em Portugu\u00eas, Ingl\u00eas e Alem\u00e3o. Confort\u00e1vel em ambientes distribu\u00eddos e multifuncionais em equipas europeias e internacionais.",
+        about_label: "Sobre",
+        about_title: "Senior Software Developer",
+        about_p1: "O meu trabalho est\u00e1 na interse\u00e7\u00e3o entre arquitetura limpa e restri\u00e7\u00f5es do mundo real. N\u00e3o resolvo apenas sintomas \u2014 tra\u00e7o os problemas at\u00e9 \u00e0 raiz e implemento solu\u00e7\u00f5es que duram.",
+        about_p2: "Liderei iniciativas de refactoring que modernizam codebases legadas sem comprometer o comportamento existente, e aplico princ\u00edpios de engenharia consistentes independentemente do dom\u00ednio.",
+        about_p3: "Essa versatilidade \u00e9 algo que constru\u00ed intencionalmente. Adaptar-me a diferentes contextos t\u00e9cnicos e de neg\u00f3cio mantendo o mesmo rigor de engenharia tornou-me um developer mais completo e um melhor colaborador.",
+        stat_years: "Anos de Experi\u00eancia",
+        stat_projects: "Projetos Entregues",
+        stat_lang: "Trilingue",
+        stat_location: "Baseado em Portugal",
+        tech_label: "Tecnologias",
+        tech_title: "Ferramentas com que trabalho",
+        tech_sub: "Engenharia agnóstica ao domínio com foco no que funciona bem.",
+        contact_label: "Contacto",
+        contact_title: "Vamos construir algo grande",
+        contact_sub: "Tem um projeto complexo ou precisa de um engenheiro que assume responsabilidade? Entre em contacto.",
+        form_name: "Nome",
+        form_name_ph: "O seu nome",
+        form_message: "Mensagem",
+        form_message_ph: "Conte-me sobre o seu projeto...",
+        form_submit: "Enviar Mensagem",
+        info_location: "Localização",
+        info_availability: "Disponibilidade",
+        info_availability_desc: "Disponível para freelance, contrato e consultoria com equipas europeias e internacionais.",
+        info_linkedin: "Conectar no LinkedIn",
+        footer: "\u00a9 2026 Codebethel. Todos os direitos reservados."
+      },
+      de: {
+        nav_services: "Leistungen",
+        nav_about: "\u00dcber mich",
+        nav_stack: "Technologien",
+        nav_contact: "Kontakt",
+        hero_badge: "Softwareentwicklung & Beratung",
+        hero_title: "Engineering, das die schwierigen Probleme l\u00f6st.",
+        hero_sub: "Ich entwickle komplexe, produktionsreife Anwendungen, bei denen Performance, Skalierbarkeit und Wartbarkeit nicht verhandelbar sind. Basiert in Portugal, t\u00e4tig mit Teams in ganz Europa.",
+        hero_cta1: "Kontakt aufnehmen",
+        hero_cta2: "Meine Leistungen",
+        services_label: "Leistungen",
+        services_title: "Was ich mitbringe",
+        services_sub: "Von der Diagnose bis zur Lieferung \u2014 ich \u00fcbernehme Verantwortung f\u00fcr die Teile, die die meisten Ingenieure vermeiden.",
+        svc1_title: "Performance-Optimierung",
+        svc1_desc: "Datenfl\u00fcsse \u00fcberdenken, unn\u00f6tige Verarbeitung reduzieren und Komponentengrenzen umstrukturieren, um Ihre Anwendung schneller zu machen \u2014 nicht nur auslieferbar.",
+        svc2_title: "Komplexe Problemdiagnose",
+        svc2_desc: "Kaskadierende Zustandsfehler, Performance-Degradation im gro\u00dfen Ma\u00dfstab, Integrationskonflikte \u2014 ich verfolge Probleme bis zur Wurzel und implementiere dauerhafte L\u00f6sungen.",
+        svc3_title: "Architektur & Refactoring",
+        svc3_desc: "Legacy-Codebases modernisieren, ohne bestehendes Verhalten zu beeintr\u00e4chtigen. Saubere Architektur unter realen Einschr\u00e4nkungen.",
+        svc4_title: "Full-Stack-Entwicklung",
+        svc4_desc: "End-to-End-Produktentwicklung \u00fcber Geoinformationssysteme, Dokumentengenerierung, Gesch\u00e4ftsplattformen, Authentifizierung und Echtzeit-Datensynchronisation.",
+        svc5_title: "Technische Beratung",
+        svc5_desc: "Strategische Beratung zu Architekturentscheidungen, Tech-Debt-Management und Skalierungsherausforderungen. Ich helfe Teams, bessere Engineering-Entscheidungen zu treffen.",
+        svc6_title: "Team-Integration",
+        svc6_desc: "Flie\u00dfend in Portugiesisch, Englisch und Deutsch. Erfahren in verteilten, funktions\u00fcbergreifenden Umgebungen mit europ\u00e4ischen und internationalen Teams.",
+        about_label: "\u00dcber mich",
+        about_title: "Senior Software Developer",
+        about_p1: "Meine Arbeit liegt an der Schnittstelle zwischen sauberer Architektur und realen Einschr\u00e4nkungen. Ich behebe nicht nur Symptome \u2014 ich verfolge Probleme bis zur Wurzel und implementiere L\u00f6sungen, die halten.",
+        about_p2: "Ich habe Refactoring-Initiativen geleitet, die Legacy-Codebases modernisieren, ohne bestehendes Verhalten zu beeintr\u00e4chtigen, und wende konsistente Engineering-Prinzipien unabh\u00e4ngig von der Dom\u00e4ne an.",
+        about_p3: "Diese Vielseitigkeit habe ich bewusst aufgebaut. Die Anpassung an verschiedene technische und gesch\u00e4ftliche Kontexte bei gleichbleibender Engineering-Pr\u00e4zision hat mich zu einem vollst\u00e4ndigeren Entwickler und st\u00e4rkeren Teamplayer gemacht.",
+        stat_years: "Jahre Erfahrung",
+        stat_projects: "Projekte geliefert",
+        stat_lang: "Dreisprachig",
+        stat_location: "Basiert in Portugal",
+        tech_label: "Technologien",
+        tech_title: "Werkzeuge, mit denen ich arbeite",
+        tech_sub: "Dom\u00e4nen-unabh\u00e4ngiges Engineering mit Fokus auf das, was funktioniert.",
+        contact_label: "Kontakt",
+        contact_title: "Lassen Sie uns etwas Gro\u00dfartiges bauen",
+        contact_sub: "Haben Sie ein komplexes Projekt oder brauchen einen Ingenieur, der Verantwortung \u00fcbernimmt? Melden Sie sich.",
+        form_name: "Name",
+        form_name_ph: "Ihr Name",
+        form_message: "Nachricht",
+        form_message_ph: "Erz\u00e4hlen Sie mir von Ihrem Projekt...",
+        form_submit: "Nachricht senden",
+        info_location: "Standort",
+        info_availability: "Verf\u00fcgbarkeit",
+        info_availability_desc: "Offen f\u00fcr Freelance-, Vertrags- und Beratungsengagements mit europ\u00e4ischen und internationalen Teams.",
+        info_linkedin: "Auf LinkedIn verbinden",
+        footer: "\u00a9 2026 Codebethel. Alle Rechte vorbehalten."
+      }
+    };
+
+    // ===== i18n ENGINE =====
+    let currentLang = 'en';
+
+    function detectLanguage() {
+      const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      if (browserLang.startsWith('pt')) return 'pt';
+      if (browserLang.startsWith('de')) return 'de';
+      return 'en';
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      // Update all text content
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update all placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+          el.placeholder = translations[lang][key];
+        }
+      });
+
+      // Update page title
+      const titles = {
+        en: 'Codebethel \u2014 Software Development & Consulting',
+        pt: 'Codebethel \u2014 Desenvolvimento de Software & Consultoria',
+        de: 'Codebethel \u2014 Softwareentwicklung & Beratung'
+      };
+      document.title = titles[lang];
+
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+      });
+
+      // Persist choice
+      try { localStorage.setItem('cb_lang', lang); } catch(e) {}
+    }
+
+    // ===== INIT =====
+    (function init() {
+      // Priority: saved preference > browser language > English
+      let lang;
+      try { lang = localStorage.getItem('cb_lang'); } catch(e) {}
+      if (!lang || !translations[lang]) {
+        lang = detectLanguage();
+      }
+      setLang(lang);
+    })();
+  </script>
+
+</body>
+</html>
