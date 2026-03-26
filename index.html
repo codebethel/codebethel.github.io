@@ -447,10 +447,10 @@
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         <li>
           <div class="lang-switcher">
-            <button class="lang-btn active" onclick="setLang('en')">EN</button>
-            <button class="lang-btn" onclick="setLang('pt')">PT</button>
-            <button class="lang-btn" onclick="setLang('pt-BR')">BR</button>
-            <button class="lang-btn" onclick="setLang('de')">DE</button>
+            <button class="lang-btn active" onclick="setLang('en', true)">EN</button>
+            <button class="lang-btn" onclick="setLang('pt', true)">PT</button>
+            <button class="lang-btn" onclick="setLang('pt-BR', true)">BR</button>
+            <button class="lang-btn" onclick="setLang('de', true)">DE</button>
           </div>
         </li>
       </ul>
@@ -853,7 +853,7 @@
       return 'en';
     }
 
-    function setLang(lang) {
+    function setLang(lang, userChose) {
       currentLang = lang;
       document.documentElement.lang = lang;
 
@@ -884,7 +884,9 @@
         btn.classList.toggle('active', btn.textContent === btnMap[lang]);
       });
 
-      try { localStorage.setItem('cb_lang', lang); } catch(e) {}
+      if (userChose) {
+        try { localStorage.setItem('cb_lang', lang); } catch(e) {}
+      }
     }
 
     // ===== INIT =====
@@ -894,7 +896,7 @@
       if (!lang || !translations[lang]) {
         lang = detectLanguage();
       }
-      setLang(lang);
+      setLang(lang, false);
     })();
   </script>
 
