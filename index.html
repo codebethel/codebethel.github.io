@@ -10,6 +10,13 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://codebethel.com/">
 
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0f">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://codebethel.com/">
@@ -17,9 +24,11 @@
   <meta property="og:description" content="We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Codebethel">
+  <meta property="og:image" content="https://codebethel.com/logo.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://codebethel.com/logo.png">
   <meta name="twitter:title" content="Codebethel — Software Development & Consulting">
   <meta name="twitter:description" content="We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable.">
 
@@ -87,12 +96,16 @@
       align-items: center;
     }
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-size: 1.25rem;
       font-weight: 700;
       color: var(--white);
       text-decoration: none;
       letter-spacing: -0.02em;
     }
+    .logo img { height: 32px; width: auto; }
     .logo span { color: var(--accent); }
     .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
     .nav-links a {
@@ -388,7 +401,7 @@
   <header>
   <nav>
     <div class="nav-inner">
-      <a href="#" class="logo">code<span>bethel</span></a>
+      <a href="#" class="logo"><img src="/logo.png" alt="Codebethel logo">code<span>bethel</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services" data-i18n="nav_services">Services</a></li>
         <li><a href="#about" data-i18n="nav_about">About</a></li>
