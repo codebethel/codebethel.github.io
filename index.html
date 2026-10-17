@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codebethel — Software Development & Consulting</title>
-  <meta name="description" content="Codebethel delivers expert software development and consulting. A distributed team serving clients across Europe and beyond.">
+  <meta name="description" content="Codebethel delivers expert software development and consulting. A distributed team serving clients across Europe and beyond. Creators of Opserax, facility and maintenance management software.">
   <meta name="keywords" content="software development, consulting, full-stack development, performance optimization, architecture, refactoring, TypeScript, React, Node.js, Python, PostgreSQL, technical consulting, AI, artificial intelligence, MCP, Model Context Protocol, offline AI models, model training, machine learning, LLM, API integration, Europe, Brazil, Brasil, Angelo Lencina, Codebethel, Deskbee, iFood, Inventsys, OSESP">
   <meta name="author" content="Codebethel">
   <meta name="robots" content="index, follow">
@@ -56,7 +56,18 @@
     "serviceType": ["Software Development", "Technical Consulting", "Performance Optimization", "Architecture & Refactoring", "Full-Stack Development", "AI Product Development", "MCP Integration", "Machine Learning & Model Training"],
     "sameAs": [
       "https://www.linkedin.com/in/angelo-lencina/"
-    ]
+    ],
+    "brand": { "@type": "Brand", "name": "Opserax", "url": "https://opserax.com" },
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "SoftwareApplication",
+        "@id": "https://opserax.com#app",
+        "name": "Opserax",
+        "url": "https://opserax.com",
+        "applicationCategory": "BusinessApplication"
+      }
+    }
   }
   </script>
 
@@ -284,6 +295,11 @@
       margin-bottom: 0.6rem;
     }
     .card p { color: var(--text-muted); font-size: 0.95rem; }
+    .product-card { display: block; text-decoration: none; color: inherit; }
+    .product-link { display: inline-block; margin-top: 1rem; color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+    footer .footer-product { margin-top: 0.5rem; }
+    footer .footer-product a { color: var(--text); text-decoration: none; font-weight: 600; }
+    footer .footer-product a:hover { color: var(--accent); }
 
     /* ---------- ABOUT ---------- */
     .about-grid {
@@ -442,6 +458,7 @@
       <a href="#" class="logo"><img src="/logo.png" alt="Codebethel logo">code<span>bethel</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#products" data-i18n="nav_products">Products</a></li>
         <li><a href="#about" data-i18n="nav_about">About</a></li>
         <li><a href="#tech" data-i18n="nav_stack">Stack</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
@@ -520,6 +537,23 @@
   </section>
 
   <!-- ABOUT -->
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <div class="section-label" data-i18n="products_label">Products</div>
+      <h2 data-i18n="products_title">Software we build and run ourselves</h2>
+      <p class="section-sub" data-i18n="products_sub">Beyond client work, Codebethel develops and operates its own product.</p>
+      <div class="grid-3">
+        <a class="card product-card" href="https://opserax.com" data-i18n-href="opserax_href">
+          <div class="card-icon">&#128295;</div>
+          <h3>Opserax</h3>
+          <p data-i18n="opserax_desc">Facility and maintenance management software: service requests, work orders, preventive maintenance and asset management, with proof of execution from the field — fully offline on mobile.</p>
+          <span class="product-link" data-i18n="opserax_cta">Visit opserax.com →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="about" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="container">
       <div class="about-grid">
@@ -637,6 +671,7 @@
 
   <footer>
     <p data-i18n="footer">&copy; 2026 Codebethel. All rights reserved.</p>
+    <p class="footer-product"><a href="https://opserax.com" data-i18n-href="opserax_href">Opserax</a> <span data-i18n="footer_product">— facility and maintenance management software by Codebethel</span></p>
   </footer>
 
   <script>
@@ -647,6 +682,14 @@
         nav_about: "About",
         nav_stack: "Stack",
         nav_contact: "Contact",
+        nav_products: "Products",
+        products_label: "Products",
+        products_title: "Software we build and run ourselves",
+        products_sub: "Beyond client work, Codebethel develops and operates its own product.",
+        opserax_desc: "Facility and maintenance management software: service requests, work orders, preventive maintenance and asset management, with proof of execution from the field — fully offline on mobile.",
+        opserax_cta: "Visit opserax.com →",
+        opserax_href: "https://opserax.com",
+        footer_product: "— facility and maintenance management software by Codebethel",
         hero_badge: "Software Development & Consulting",
         hero_title: "Engineering that solves the hard problems.",
         hero_sub: "We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.",
@@ -701,6 +744,14 @@
         nav_about: "Sobre",
         nav_stack: "Tecnologias",
         nav_contact: "Contacto",
+        nav_products: "Produtos",
+        products_label: "Produtos",
+        products_title: "Software que construímos e operamos",
+        products_sub: "Além dos projetos para clientes, a Codebethel desenvolve e opera o seu próprio produto.",
+        opserax_desc: "Software de gestão de facilities e manutenção: pedidos, ordens de trabalho, manutenção preventiva e gestão de ativos, com prova de execução no terreno — totalmente offline no telemóvel.",
+        opserax_cta: "Visitar opserax.com →",
+        opserax_href: "https://opserax.com/pt",
+        footer_product: "— software de gestão de facilities e manutenção da Codebethel",
         hero_badge: "Desenvolvimento de Software & Consultoria",
         hero_title: "Engenharia que resolve os problemas dif\u00edceis.",
         hero_sub: "Constru\u00edmos aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Uma equipa distribu\u00edda a trabalhar com clientes por toda a Europa e al\u00e9m.",
@@ -755,6 +806,14 @@
         nav_about: "Sobre",
         nav_stack: "Tecnologias",
         nav_contact: "Contato",
+        nav_products: "Produtos",
+        products_label: "Produtos",
+        products_title: "Software que construímos e operamos",
+        products_sub: "Além dos projetos para clientes, a Codebethel desenvolve e opera o próprio produto.",
+        opserax_desc: "Software de gestão de facilities e manutenção: chamados, ordens de serviço, manutenção preventiva e gestão de ativos, com prova de execução em campo — 100% offline no celular.",
+        opserax_cta: "Conhecer o Opserax →",
+        opserax_href: "https://opserax.com/pt",
+        footer_product: "— software de gestão de facilities e manutenção da Codebethel",
         hero_badge: "Desenvolvimento de Software & Consultoria",
         hero_title: "Engenharia que resolve os problemas dif\u00edceis.",
         hero_sub: "Constru\u00edmos aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Um time distribu\u00eddo trabalhando com clientes por toda a Europa e al\u00e9m.",
@@ -809,6 +868,14 @@
         nav_about: "\u00dcber uns",
         nav_stack: "Technologien",
         nav_contact: "Kontakt",
+        nav_products: "Produkte",
+        products_label: "Produkte",
+        products_title: "Software, die wir selbst bauen und betreiben",
+        products_sub: "Neben Kundenprojekten entwickelt und betreibt Codebethel ein eigenes Produkt.",
+        opserax_desc: "Software für Facility- und Instandhaltungsmanagement: Meldungen, Arbeitsaufträge, vorbeugende Wartung und Verwaltung von Vermögenswerten, mit Ausführungsnachweis aus dem Feld — vollständig offline auf dem Smartphone.",
+        opserax_cta: "opserax.com besuchen →",
+        opserax_href: "https://opserax.com",
+        footer_product: "— Software für Facility- und Instandhaltungsmanagement von Codebethel",
         hero_badge: "Softwareentwicklung & Beratung",
         hero_title: "Engineering, das die schwierigen Probleme l\u00f6st.",
         hero_sub: "Wir entwickeln komplexe, produktionsreife Anwendungen, bei denen Performance, Skalierbarkeit und Wartbarkeit nicht verhandelbar sind. Ein verteiltes Team, t\u00e4tig mit Kunden in ganz Europa und dar\u00fcber hinaus.",
@@ -879,6 +946,13 @@
         const key = el.getAttribute('data-i18n');
         if (translations[lang][key]) {
           el.textContent = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-href]').forEach(el => {
+        const key = el.getAttribute('data-i18n-href');
+        if (translations[lang][key]) {
+          el.href = translations[lang][key];
         }
       });
 
