@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Codebethel — Software Development & Consulting</title>
-  <meta name="description" content="Codebethel delivers expert software development and consulting. A distributed team serving clients across Europe and beyond. Creators of Opserax, facility and maintenance management software.">
-  <meta name="keywords" content="software development, consulting, full-stack development, performance optimization, architecture, refactoring, TypeScript, React, Node.js, Python, PostgreSQL, technical consulting, AI, artificial intelligence, MCP, Model Context Protocol, offline AI models, model training, machine learning, LLM, API integration, Europe, Brazil, Brasil, Angelo Lencina, Codebethel, Deskbee, iFood, Inventsys, OSESP">
+  <title>Codebethel — Software House & Product Studio · Creators of Opserax</title>
+  <meta name="description" content="Codebethel is a software house founded in 2018. We design, build and operate production software on demand — SaaS platforms, offline-first mobile apps, integrations and AI — and we are the team behind Opserax, facility and maintenance management software.">
+  <meta name="keywords" content="Codebethel, Opserax, software house, software development, product development, consulting, SaaS, multi-tenant, offline-first mobile apps, React Native, Laravel, PHP, TypeScript, React, Next.js, Node.js, Rust, integrations, ERP integration, Keycloak, SSO, AI, LLM, MCP, Model Context Protocol, facility management software, CMMS, maintenance management, Brazil, Brasil, Europe, Angelo Lencina">
   <meta name="author" content="Codebethel">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://codebethel.com/">
@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#0a0a0f">
+  <meta name="theme-color" content="#0b0b10">
 
   <!-- Hreflang for multilingual SEO -->
   <link rel="alternate" hreflang="en" href="https://codebethel.com/">
@@ -27,8 +27,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://codebethel.com/">
-  <meta property="og:title" content="Codebethel — Software Development & Consulting">
-  <meta property="og:description" content="We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.">
+  <meta property="og:title" content="Codebethel — Software House & Product Studio">
+  <meta property="og:description" content="We design, build and operate production software on demand. Creators of Opserax — facility and maintenance management software.">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="pt_PT">
   <meta property="og:locale:alternate" content="pt_BR">
@@ -39,53 +39,70 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:image" content="https://codebethel.com/logo.png">
-  <meta name="twitter:title" content="Codebethel — Software Development & Consulting">
-  <meta name="twitter:description" content="We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable.">
-
+  <meta name="twitter:title" content="Codebethel — Software House & Product Studio">
+  <meta name="twitter:description" content="We design, build and operate production software on demand. Creators of Opserax.">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Codebethel",
-    "url": "https://codebethel.com",
-    "description": "Expert software development and consulting. A distributed team serving clients across Europe and beyond.",
-    "email": "angelo@codebethel.com",
-    "areaServed": "Europe",
-    "serviceType": ["Software Development", "Technical Consulting", "Performance Optimization", "Architecture & Refactoring", "Full-Stack Development", "AI Product Development", "MCP Integration", "Machine Learning & Model Training"],
-    "sameAs": [
-      "https://www.linkedin.com/in/angelo-lencina/"
-    ],
-    "brand": { "@type": "Brand", "name": "Opserax", "url": "https://opserax.com" },
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": {
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://codebethel.com/#org",
+        "name": "Codebethel",
+        "url": "https://codebethel.com",
+        "logo": "https://codebethel.com/logo.png",
+        "foundingDate": "2018",
+        "description": "Software house and product studio. We design, build and operate production software on demand, and we are the creators of Opserax.",
+        "email": "angelo@codebethel.com",
+        "founder": { "@type": "Person", "name": "Angelo Lencina", "sameAs": "https://www.linkedin.com/in/angelo-lencina/" },
+        "areaServed": ["BR", "Europe"],
+        "serviceType": ["Software Development", "Product Development", "Technical Consulting", "SaaS Platform Engineering", "Mobile App Development", "Systems Integration", "AI Product Development", "Architecture & Refactoring"],
+        "sameAs": [
+          "https://www.linkedin.com/company/112560107/",
+          "https://www.linkedin.com/in/angelo-lencina/",
+          "https://opserax.com"
+        ],
+        "brand": { "@type": "Brand", "name": "Opserax", "url": "https://opserax.com" },
+        "owns": { "@id": "https://opserax.com#app" }
+      },
+      {
         "@type": "SoftwareApplication",
         "@id": "https://opserax.com#app",
         "name": "Opserax",
         "url": "https://opserax.com",
-        "applicationCategory": "BusinessApplication"
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "description": "Facility and maintenance management software: service requests, work orders, preventive maintenance, assets and SLAs, with an offline-first mobile app for field teams.",
+        "publisher": { "@id": "https://codebethel.com/#org" }
       }
-    }
+    ]
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0a0a0f;
+      --bg: #0b0b10;
       --bg-card: #12121a;
-      --border: #1e1e2e;
+      --bg-elev: #171722;
+      --border: #22222f;
+      --border-strong: #2e2e3e;
       --text: #e4e4e7;
       --text-muted: #9ca3af;
-      --accent: #6366f1;
-      --accent-glow: rgba(99, 102, 241, 0.15);
+      --accent: #7c6cf6;
+      --accent-soft: #a78bff;
+      --accent-glow: rgba(124, 108, 246, 0.16);
+      --amber: #e08a2c;
+      --amber-glow: rgba(224, 138, 44, 0.16);
       --white: #ffffff;
+      --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
     }
 
     html { scroll-behavior: smooth; }
@@ -96,7 +113,11 @@
       color: var(--text);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
+
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
 
     /* ---------- NAV ---------- */
     nav {
@@ -104,22 +125,24 @@
       top: 0;
       width: 100%;
       z-index: 100;
-      padding: 1rem 2rem;
+      padding: 0.9rem 2rem;
       backdrop-filter: blur(16px);
-      background: rgba(10, 10, 15, 0.8);
+      background: rgba(11, 11, 16, 0.82);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1160px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
     }
     .logo {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-family: var(--font-display);
       font-size: 1.25rem;
       font-weight: 700;
       color: var(--white);
@@ -129,34 +152,7 @@
     .logo img { height: 32px; width: auto; }
     .logo span { color: var(--accent); }
 
-    /* ---------- LANGUAGE SWITCHER ---------- */
-    .lang-switcher {
-      display: flex;
-      gap: 0.25rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.2rem;
-    }
-    .lang-btn {
-      padding: 0.3rem 0.65rem;
-      border: none;
-      border-radius: 6px;
-      background: transparent;
-      color: var(--text-muted);
-      font-family: inherit;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .lang-btn:hover { color: var(--white); }
-    .lang-btn.active {
-      background: var(--accent);
-      color: var(--white);
-    }
-
-    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
@@ -165,61 +161,129 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--white); }
+    .nav-links a.nav-opserax {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.8rem;
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      color: var(--text);
+    }
+    .nav-links a.nav-opserax:hover { border-color: var(--accent); color: var(--white); }
+    .nav-opserax svg { width: 16px; height: 16px; }
 
+    /* ---------- LANGUAGE SWITCHER ---------- */
+    .lang-switcher {
+      display: flex;
+      gap: 0.2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.2rem;
+    }
+    .lang-btn {
+      padding: 0.25rem 0.55rem;
+      border: none;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover { color: var(--white); }
+    .lang-btn.active { background: var(--accent); color: var(--white); }
 
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
 
     /* ---------- HERO ---------- */
     .hero {
-      min-height: 100vh;
+      min-height: min(100vh, 900px);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 8rem 2rem 4rem;
+      padding: 8rem 2rem 5rem;
       position: relative;
       overflow: hidden;
     }
     .hero::before {
       content: '';
       position: absolute;
-      width: 600px; height: 600px;
+      width: 760px; height: 760px;
       background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-      top: -100px; left: 50%;
+      top: -160px; left: 50%;
       transform: translateX(-50%);
       pointer-events: none;
     }
-    .hero-content { max-width: 720px; position: relative; z-index: 1; }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at 50% 30%, rgba(0,0,0,0.55), transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 30%, rgba(0,0,0,0.55), transparent 70%);
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .hero-content { max-width: 820px; position: relative; z-index: 1; }
     .badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       padding: 0.35rem 1rem;
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-strong);
       border-radius: 999px;
-      font-size: 0.8rem;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 1.75rem;
       background: var(--accent-glow);
     }
     h1 {
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
       font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
       color: var(--white);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
-    .hero p {
-      font-size: 1.1rem;
+    h1 .hl {
+      background: linear-gradient(90deg, var(--accent-soft), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p.lead {
+      font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 560px;
-      margin: 0 auto 2rem;
+      max-width: 640px;
+      margin: 0 auto 2.25rem;
     }
     .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.8rem 1.75rem;
+      padding: 0.8rem 1.6rem;
       border-radius: 8px;
+      font-family: inherit;
       font-size: 0.95rem;
       font-weight: 600;
       text-decoration: none;
@@ -230,125 +294,312 @@
     .btn-primary {
       background: var(--accent);
       color: var(--white);
-      box-shadow: 0 0 24px var(--accent-glow);
+      box-shadow: 0 0 28px var(--accent-glow);
     }
-    .btn-primary:hover { filter: brightness(1.15); transform: translateY(-1px); }
+    .btn-primary:hover { filter: brightness(1.12); transform: translateY(-1px); }
     .btn-outline {
       background: transparent;
       color: var(--text);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-strong);
     }
     .btn-outline:hover { border-color: var(--accent); color: var(--white); }
 
+    .hero-product {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 3rem;
+      padding: 0.6rem 1rem 0.6rem 0.6rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(18, 18, 26, 0.7);
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .hero-product:hover { border-color: var(--accent); color: var(--white); }
+    .hero-product .mark {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: #1a1730;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-product .mark svg { width: 26px; height: 26px; }
+    .hero-product strong { color: var(--white); font-weight: 600; }
+
     /* ---------- SECTIONS ---------- */
-    section { padding: 6rem 2rem; }
-    .container { max-width: 1100px; margin: 0 auto; }
+    section { padding: 6.5rem 2rem; }
+    .container { max-width: 1160px; margin: 0 auto; }
+    .section-alt { background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .section-label {
-      font-size: 0.8rem;
-      font-weight: 600;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--accent-soft);
+      margin-bottom: 0.9rem;
     }
     h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.8vw, 2.7rem);
       font-weight: 700;
+      line-height: 1.15;
       color: var(--white);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
       margin-bottom: 1rem;
     }
     .section-sub {
       color: var(--text-muted);
-      max-width: 600px;
+      max-width: 640px;
       margin-bottom: 3rem;
       font-size: 1.05rem;
     }
 
-    /* ---------- SERVICES GRID ---------- */
+    /* ---------- OPSERAX ---------- */
+    .opserax {
+      position: relative;
+      overflow: hidden;
+    }
+    .opserax::before {
+      content: '';
+      position: absolute;
+      width: 640px; height: 640px;
+      background: radial-gradient(circle, var(--amber-glow) 0%, transparent 70%);
+      right: -200px; top: 10%;
+      pointer-events: none;
+    }
+    .opserax-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .opserax-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .opserax-brand svg { width: 44px; height: 44px; }
+    .opserax-brand .name {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.025em;
+    }
+    .live {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-left: 0.25rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: var(--amber-glow);
+      color: var(--amber);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .live::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .feature-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .feature-list li {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .feature-list li::before {
+      content: '';
+      flex: 0 0 auto;
+      width: 8px; height: 8px;
+      margin-top: 0.45rem;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+    .opserax-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+    .opserax-tags span {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      color: var(--text-muted);
+    }
+    .opserax-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .shots { position: relative; padding-bottom: 3rem; }
+    .shot-main {
+      border-radius: 12px;
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+      overflow: hidden;
+      background: var(--bg-elev);
+    }
+    .shot-main .chrome {
+      display: flex; gap: 6px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .shot-main .chrome i { width: 9px; height: 9px; border-radius: 50%; background: var(--border-strong); }
+    .shot-main .chrome .url {
+      margin-left: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      line-height: 9px;
+    }
+    .shot-phone {
+      position: absolute;
+      width: 27%;
+      right: -3%;
+      bottom: 0;
+      border-radius: 14px;
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+
+    /* ---------- CARDS ---------- */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 2rem;
+      padding: 1.9rem;
       transition: border-color 0.3s, transform 0.3s;
     }
-    .card:hover { border-color: var(--accent); transform: translateY(-4px); }
-    .card-icon {
-      width: 48px; height: 48px;
-      background: var(--accent-glow);
-      border: 1px solid rgba(99,102,241,0.25);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.25rem;
-      font-size: 1.4rem;
+    .section-alt .card { background: var(--bg); }
+    .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .card-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent-soft);
+      margin-bottom: 1rem;
+      display: block;
     }
     .card h3 {
-      font-size: 1.15rem;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--white);
       margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
     }
     .card p { color: var(--text-muted); font-size: 0.95rem; }
-    .product-card { display: block; text-decoration: none; color: inherit; }
-    .product-link { display: inline-block; margin-top: 1rem; color: var(--accent); font-weight: 600; font-size: 0.95rem; }
-    footer .footer-product { margin-top: 0.5rem; }
-    footer .footer-product a { color: var(--text); text-decoration: none; font-weight: 600; }
-    footer .footer-product a:hover { color: var(--accent); }
+
+    /* ---------- PROCESS ---------- */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      counter-reset: step;
+    }
+    .step {
+      position: relative;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border-strong);
+    }
+    .step::before {
+      counter-increment: step;
+      content: '0' counter(step);
+      position: absolute;
+      top: -0.85rem;
+      left: 0;
+      padding-right: 0.6rem;
+      background: var(--bg);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-soft);
+    }
+    .step h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .step p { color: var(--text-muted); font-size: 0.93rem; }
 
     /* ---------- ABOUT ---------- */
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 1fr;
       gap: 4rem;
       align-items: center;
     }
     .about-text p { margin-bottom: 1.25rem; color: var(--text-muted); }
+    .about-text a { color: var(--accent-soft); text-decoration: none; font-weight: 600; }
+    .about-text a:hover { text-decoration: underline; }
     .stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
     .stat {
-      background: var(--bg-card);
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
-      text-align: center;
     }
     .stat-number {
-      font-size: 2rem;
+      font-family: var(--font-display);
+      font-size: 2.1rem;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--white);
       display: block;
+      line-height: 1.2;
     }
-    .stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); }
 
     /* ---------- TECH ---------- */
-    .tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 2rem;
+    .tech-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
     }
+    .tech-group h3 {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .tech-tag {
-      padding: 0.5rem 1.2rem;
+      padding: 0.4rem 0.95rem;
       border: 1px solid var(--border);
       border-radius: 999px;
       font-size: 0.85rem;
-      color: var(--text-muted);
+      color: var(--text);
       background: var(--bg-card);
       transition: border-color 0.2s, color 0.2s;
     }
     .tech-tag:hover { border-color: var(--accent); color: var(--white); }
 
     /* ---------- CONTACT ---------- */
-    .contact-section { background: var(--bg-card); border-top: 1px solid var(--border); }
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -356,12 +607,13 @@
     }
     form { display: flex; flex-direction: column; gap: 1rem; }
     label {
+      display: block;
       font-size: 0.85rem;
       font-weight: 500;
       color: var(--text-muted);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.3rem;
     }
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       padding: 0.75rem 1rem;
       background: var(--bg);
@@ -373,12 +625,13 @@
       transition: border-color 0.2s;
       resize: vertical;
     }
-    input:focus, textarea:focus { outline: none; border-color: var(--accent); }
-    textarea { min-height: 120px; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); }
+    textarea { min-height: 130px; }
+    .form-note { font-size: 0.8rem; color: var(--text-muted); }
     .contact-info-item { margin-bottom: 1.5rem; }
-    .contact-info-item h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .contact-info-item h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 0.2rem; }
     .contact-info-item p { color: var(--text-muted); font-size: 0.95rem; }
-    .contact-info-item a { color: var(--accent); text-decoration: none; }
+    .contact-info-item a { color: var(--accent-soft); text-decoration: none; }
     .contact-info-item a:hover { text-decoration: underline; }
 
     /* ---------- WHATSAPP FAB ---------- */
@@ -398,58 +651,111 @@
       transition: transform 0.2s, box-shadow 0.2s;
       text-decoration: none;
     }
-    .whatsapp-fab:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-    }
-    .whatsapp-fab svg {
-      width: 28px;
-      height: 28px;
-      fill: #fff;
-    }
+    .whatsapp-fab:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
+    .whatsapp-fab svg { width: 28px; height: 28px; fill: #fff; }
 
     /* ---------- FOOTER ---------- */
     footer {
-      text-align: center;
-      padding: 2rem;
+      padding: 3.5rem 2rem 2.5rem;
       border-top: 1px solid var(--border);
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
     }
+    .footer-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+    .footer-grid h4 {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      margin-bottom: 0.9rem;
+    }
+    .footer-grid ul { list-style: none; display: grid; gap: 0.45rem; }
+    .footer-grid a { color: var(--text-muted); text-decoration: none; }
+    .footer-grid a:hover { color: var(--white); }
+    .footer-brand p { max-width: 320px; margin-top: 0.75rem; }
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 2.5rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+    }
+    .footer-bottom a { color: var(--text); text-decoration: none; font-weight: 600; }
+    .footer-bottom a:hover { color: var(--accent-soft); }
 
     /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 768px) {
+    @media (max-width: 980px) {
+      .opserax-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .steps { grid-template-columns: 1fr 1fr; row-gap: 2.5rem; }
+      .shot-phone { right: 2%; }
+    }
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
       .nav-links { display: none; }
       .nav-links.show {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(10, 10, 15, 0.95);
+        background: rgba(11, 11, 16, 0.97);
         padding: 1.5rem 2rem;
         border-bottom: 1px solid var(--border);
         gap: 1rem;
       }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .stats { grid-template-columns: 1fr 1fr; }
-      section { padding: 4rem 1.25rem; }
     }
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text);
-      font-size: 1.5rem;
-      cursor: pointer;
+    @media (max-width: 640px) {
+      nav { padding: 0.9rem 1rem; }
+      section { padding: 4.5rem 1rem; }
+      .hero { padding: 7rem 1rem 4rem; }
+      .feature-list { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      footer { padding: 3rem 1rem 2rem; }
+      .whatsapp-fab { bottom: 1.25rem; right: 1.25rem; }
     }
-    @media (max-width: 768px) {
-      .menu-toggle { display: block; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .live::before { animation: none; }
+      .card, .btn { transition: none; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Opserax mark (dark-mode variant), reused via <use> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="opserax-mark" viewBox="0 0 100 100">
+      <path d="M28 20 L10 50 L28 80 L22 76 L16 50 L22 24 Z" fill="#A78BFF"/>
+      <path d="M72 20 L90 50 L72 80 L78 76 L84 50 L78 24 Z" fill="#A78BFF"/>
+      <g fill="#FFFFFF">
+        <rect x="46" y="22" width="8" height="10"/>
+        <rect x="46" y="68" width="8" height="10"/>
+        <rect x="22" y="46" width="10" height="8"/>
+        <rect x="68" y="46" width="10" height="8"/>
+        <rect x="30" y="30" width="10" height="8" transform="rotate(-45 35 34)"/>
+        <rect x="60" y="30" width="10" height="8" transform="rotate(45 65 34)"/>
+        <rect x="30" y="62" width="10" height="8" transform="rotate(45 35 66)"/>
+        <rect x="60" y="62" width="10" height="8" transform="rotate(-45 65 66)"/>
+      </g>
+      <circle cx="50" cy="50" r="17" fill="#FFFFFF"/>
+      <circle cx="50" cy="50" r="7" fill="#0F0E0C"/>
+    </symbol>
+  </svg>
 
   <!-- NAV -->
   <header>
@@ -457,11 +763,16 @@
     <div class="nav-inner">
       <a href="#" class="logo"><img src="/logo.png" alt="Codebethel logo">code<span>bethel</span></a>
       <ul class="nav-links" id="navLinks">
+        <li><a href="#opserax" data-i18n="nav_product">Opserax</a></li>
         <li><a href="#services" data-i18n="nav_services">Services</a></li>
-        <li><a href="#products" data-i18n="nav_products">Products</a></li>
+        <li><a href="#process" data-i18n="nav_process">How we work</a></li>
         <li><a href="#about" data-i18n="nav_about">About</a></li>
-        <li><a href="#tech" data-i18n="nav_stack">Stack</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        <li>
+          <a class="nav-opserax" href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#opserax-mark"/></svg>opserax.com ↗
+          </a>
+        </li>
         <li>
           <div class="lang-switcher">
             <button class="lang-btn active" onclick="setLang('en', true)">EN</button>
@@ -480,13 +791,60 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="badge" data-i18n="hero_badge">Software Development & Consulting</div>
-      <h1 data-i18n="hero_title">Engineering that solves the hard problems.</h1>
-      <p data-i18n="hero_sub">We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.</p>
+      <div class="badge" data-i18n="hero_badge">Software house · Since 2018</div>
+      <h1 data-i18n-html="hero_title">We build software that <span class="hl">runs real operations.</span></h1>
+      <p class="lead" data-i18n="hero_sub">Codebethel designs, builds and operates production software on demand — SaaS platforms, offline-first mobile apps, integrations and AI. We ship for clients, and we run our own product, Opserax, in production every day.</p>
       <div class="cta-group">
-        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Let's Connect</a>
-        <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">See What We Do</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Start a project</a>
+        <a href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="hero_cta2">Discover Opserax ↗</a>
       </div>
+      <a class="hero-product" href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener">
+        <span class="mark"><svg aria-hidden="true"><use href="#opserax-mark"/></svg></span>
+        <span><strong>Opserax</strong> · <span data-i18n="hero_product">facility & maintenance management, built by Codebethel</span> →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- OPSERAX -->
+  <section id="opserax" class="opserax section-alt">
+    <div class="container opserax-grid">
+      <div>
+        <div class="section-label" data-i18n="opserax_label">Our product</div>
+        <div class="opserax-brand">
+          <svg aria-hidden="true"><use href="#opserax-mark"/></svg>
+          <span class="name">Opserax</span>
+          <span class="live" data-i18n="opserax_live">In production</span>
+        </div>
+        <h2 data-i18n="opserax_title">Maintenance and facilities, from the request to the signed work order.</h2>
+        <p class="section-sub" style="margin-bottom:0" data-i18n="opserax_sub">Opserax replaces spreadsheets, WhatsApp groups and disconnected systems with one workspace for service requests, work orders, preventive maintenance and assets. Field teams work on mobile — even offline — while managers see everything in real time.</p>
+        <ul class="feature-list">
+          <li data-i18n="opx_f1">Executive dashboard with KPIs and trends</li>
+          <li data-i18n="opx_f2">Preventive maintenance that schedules itself</li>
+          <li data-i18n="opx_f3">Assets with QR codes, location and custom forms</li>
+          <li data-i18n="opx_f4">Work orders in kanban, list, calendar and map</li>
+          <li data-i18n="opx_f5">Service requests with business-hours SLA</li>
+          <li data-i18n="opx_f6">Audit-ready reports in Excel and PDF</li>
+        </ul>
+        <div class="opserax-tags">
+          <span data-i18n="opx_t1">Web + mobile</span>
+          <span data-i18n="opx_t2">Offline-first</span>
+          <span data-i18n="opx_t3">Real time</span>
+          <span data-i18n="opx_t4">Isolated database per client</span>
+          <span data-i18n="opx_t5">SSO per tenant</span>
+          <span data-i18n="opx_t6">OpsBridge integrations</span>
+        </div>
+        <div class="opserax-ctas">
+          <a class="btn btn-primary" href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener" data-i18n="opserax_cta">Visit opserax.com ↗</a>
+          <a class="btn btn-outline" href="https://opserax.com/en/demo" data-i18n-href="opserax_demo_href" target="_blank" rel="noopener" data-i18n="opserax_demo">Book a demo</a>
+        </div>
+      </div>
+      <a class="shots" href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener" aria-label="Opserax">
+        <div class="shot-main">
+          <div class="chrome"><i></i><i></i><i></i><span class="url">opserax.com</span></div>
+          <img src="/img/opserax-dashboard.webp" width="960" height="600" loading="lazy" alt="Opserax executive dashboard with work order KPIs and trends" data-i18n-alt="opserax_img_alt">
+        </div>
+        <img class="shot-phone" src="/img/opserax-mobile.webp" width="640" height="800" loading="lazy" alt="Opserax mobile app in the hands of a field technician" data-i18n-alt="opserax_phone_alt">
+      </a>
     </div>
   </section>
 
@@ -494,88 +852,97 @@
   <section id="services">
     <div class="container">
       <div class="section-label" data-i18n="services_label">Services</div>
-      <h2 data-i18n="services_title">What we bring to the table</h2>
-      <p class="section-sub" data-i18n="services_sub">From diagnosis to delivery — we take ownership of the parts most engineers avoid.</p>
+      <h2 data-i18n="services_title">Products on demand, built the way we build our own.</h2>
+      <p class="section-sub" data-i18n="services_sub">The same engineering behind Opserax, applied to your problem. We take ownership from the first conversation to production — and stay for what comes after.</p>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">&#9881;</div>
-          <h3 data-i18n="svc1_title">Performance Optimization</h3>
-          <p data-i18n="svc1_desc">Rethinking data flows, reducing unnecessary processing, and restructuring component boundaries to make your application faster — not just shippable.</p>
+          <span class="card-num">01</span>
+          <h3 data-i18n="svc1_title">Product development</h3>
+          <p data-i18n="svc1_desc">From idea to production: discovery, MVP, launch and continuous evolution. A small senior team that writes the code and owns the outcome.</p>
         </div>
         <div class="card">
-          <div class="card-icon">&#128269;</div>
-          <h3 data-i18n="svc2_title">Complex Problem Diagnosis</h3>
-          <p data-i18n="svc2_desc">Cascading state failures, performance degradation at scale, integration conflicts — we trace issues to their root and implement solutions that last.</p>
+          <span class="card-num">02</span>
+          <h3 data-i18n="svc2_title">SaaS & multi-tenant platforms</h3>
+          <p data-i18n="svc2_desc">Tenant isolation, per-client identity and SSO, roles and permissions, billing-ready plans and the operational tooling a real SaaS needs.</p>
         </div>
         <div class="card">
-          <div class="card-icon">&#128736;</div>
-          <h3 data-i18n="svc3_title">Architecture & Refactoring</h3>
-          <p data-i18n="svc3_desc">Modernizing legacy codebases without disrupting existing behavior. Clean architecture applied to real-world constraints.</p>
+          <span class="card-num">03</span>
+          <h3 data-i18n="svc3_title">Offline-first mobile apps</h3>
+          <p data-i18n="svc3_desc">iOS and Android apps for field teams that keep working without signal and sync safely when they reconnect — photos, signatures, QR codes and all.</p>
         </div>
         <div class="card">
-          <div class="card-icon">&#127760;</div>
-          <h3 data-i18n="svc4_title">Full-Stack Development</h3>
-          <p data-i18n="svc4_desc">End-to-end product engineering across geospatial systems, document generation, business platforms, authentication, and real-time data sync.</p>
+          <span class="card-num">04</span>
+          <h3 data-i18n="svc4_title">Integrations & APIs</h3>
+          <p data-i18n="svc4_desc">ERPs, service desks, identity providers and BI. OAuth2, signed webhooks, queues and audit logs — so your systems finally talk to each other.</p>
         </div>
         <div class="card">
-          <div class="card-icon">&#128640;</div>
-          <h3 data-i18n="svc5_title">Technical Consulting</h3>
-          <p data-i18n="svc5_desc">Strategic advice on architecture decisions, tech debt management, and scaling challenges. We help teams make better engineering choices.</p>
+          <span class="card-num">05</span>
+          <h3 data-i18n="svc5_title">AI in real products</h3>
+          <p data-i18n="svc5_desc">LLM features, agents and MCP integrations shipped to production — with guardrails, evaluation and costs under control, not just demos.</p>
         </div>
         <div class="card">
-          <div class="card-icon">&#129309;</div>
-          <h3 data-i18n="svc6_title">Team Integration</h3>
-          <p data-i18n="svc6_desc">Comfortable in distributed, cross-functional environments across European and international teams.</p>
+          <span class="card-num">06</span>
+          <h3 data-i18n="svc6_title">Architecture, performance & rescue</h3>
+          <p data-i18n="svc6_desc">Diagnosing hard problems, modernizing legacy codebases without breaking behaviour, and cutting cloud costs. Root causes, not workarounds.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">&#129302;</div>
-          <h3 data-i18n="svc7_title">AI Product Development</h3>
-          <p data-i18n="svc7_desc">Building AI-powered products with MCP integrations, API-driven workflows, offline model deployment, and custom model training pipelines for real-world applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section-alt">
+    <div class="container">
+      <div class="section-label" data-i18n="process_label">How we work</div>
+      <h2 data-i18n="process_title">Short cycles, working software, no surprises.</h2>
+      <p class="section-sub" data-i18n="process_sub">We work like a product team, not a ticket queue. You see progress running in a real environment every cycle.</p>
+      <div class="steps">
+        <div class="step" style="--bg: var(--bg-card)">
+          <h3 data-i18n="step1_title">Discovery</h3>
+          <p data-i18n="step1_desc">We map the operation, the users and the constraints, and agree on what success looks like.</p>
+        </div>
+        <div class="step" style="--bg: var(--bg-card)">
+          <h3 data-i18n="step2_title">Build in cycles</h3>
+          <p data-i18n="step2_desc">Small, frequent deliveries you can use and review — with tests and CI from day one.</p>
+        </div>
+        <div class="step" style="--bg: var(--bg-card)">
+          <h3 data-i18n="step3_title">Ship to production</h3>
+          <p data-i18n="step3_desc">Infrastructure, monitoring, security and data migration handled — launch is a non-event.</p>
+        </div>
+        <div class="step" style="--bg: var(--bg-card)">
+          <h3 data-i18n="step4_title">Operate & evolve</h3>
+          <p data-i18n="step4_desc">We support what we ship and keep improving it, the same way we run Opserax.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <!-- PRODUCTS -->
-  <section id="products">
-    <div class="container">
-      <div class="section-label" data-i18n="products_label">Products</div>
-      <h2 data-i18n="products_title">Software we build and run ourselves</h2>
-      <p class="section-sub" data-i18n="products_sub">Beyond client work, Codebethel develops and operates its own product.</p>
-      <div class="grid-3">
-        <a class="card product-card" href="https://opserax.com" data-i18n-href="opserax_href">
-          <div class="card-icon">&#128295;</div>
-          <h3>Opserax</h3>
-          <p data-i18n="opserax_desc">Facility and maintenance management software: service requests, work orders, preventive maintenance and asset management, with proof of execution from the field — fully offline on mobile.</p>
-          <span class="product-link" data-i18n="opserax_cta">Visit opserax.com →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <section id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
           <div class="section-label" data-i18n="about_label">About</div>
-          <h2 data-i18n="about_title">Software Development Team</h2>
-          <p data-i18n="about_p1">Our work sits at the intersection of clean architecture and real-world constraints. We don't just fix symptoms — we trace issues to their root and implement solutions that last.</p>
-          <p data-i18n="about_p2">We've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and we apply consistent engineering principles regardless of the domain.</p>
-          <p data-i18n="about_p3">That versatility is something we've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made us a more complete team and stronger collaborators.</p>
+          <h2 data-i18n="about_title">A software house that also runs its own product.</h2>
+          <p data-i18n="about_p1">Codebethel was founded in 2018 to build software on demand for companies that need more than a vendor: a team that understands the business and takes ownership of the result.</p>
+          <p data-i18n="about_p2">Running Opserax ourselves keeps us honest. Every day we deal with what clients deal with — uptime, support, integrations, costs and users in the field — and that experience goes straight into the projects we build for others.</p>
+          <p><span data-i18n="about_p3">Want to see our work in production?</span> <a href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener" data-i18n="about_link">Open opserax.com ↗</a></p>
         </div>
         <div class="stats">
           <div class="stat">
+            <span class="stat-number">2018</span>
+            <span class="stat-label" data-i18n="stat_founded">Founded</span>
+          </div>
+          <div class="stat">
             <span class="stat-number">10+</span>
-            <span class="stat-label" data-i18n="stat_years">Years Experience</span>
+            <span class="stat-label" data-i18n="stat_years">Years of engineering experience</span>
           </div>
           <div class="stat">
             <span class="stat-number">50+</span>
-            <span class="stat-label" data-i18n="stat_projects">Projects Delivered</span>
+            <span class="stat-label" data-i18n="stat_projects">Projects delivered</span>
           </div>
           <div class="stat">
-            <span class="stat-number">EU</span>
-            <span class="stat-label" data-i18n="stat_location">Team across Europe</span>
+            <span class="stat-number">BR · EU</span>
+            <span class="stat-label" data-i18n="stat_location">Clients in Brazil, Europe and beyond</span>
           </div>
         </div>
       </div>
@@ -583,58 +950,90 @@
   </section>
 
   <!-- TECH STACK -->
-  <section id="tech">
+  <section id="tech" class="section-alt">
     <div class="container">
-      <div class="section-label" data-i18n="tech_label">Tech Stack</div>
-      <h2 data-i18n="tech_title">Tools we work with</h2>
-      <p class="section-sub" data-i18n="tech_sub">Domain-agnostic engineering with a focus on what gets the job done right.</p>
-      <div class="tech-tags">
-        <span class="tech-tag">TypeScript</span>
-        <span class="tech-tag">JavaScript</span>
-        <span class="tech-tag">React</span>
-        <span class="tech-tag">Next.js</span>
-        <span class="tech-tag">Node.js</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">PostgreSQL</span>
-        <span class="tech-tag">REST APIs</span>
-        <span class="tech-tag">GraphQL</span>
-        <span class="tech-tag">Docker</span>
-        <span class="tech-tag">AWS</span>
-        <span class="tech-tag">CI/CD</span>
-        <span class="tech-tag">Git</span>
-        <span class="tech-tag">Redis</span>
-        <span class="tech-tag">GIS / Geospatial</span>
-        <span class="tech-tag">Real-time Systems</span>
-        <span class="tech-tag">AI / LLM</span>
-        <span class="tech-tag">MCP (Model Context Protocol)</span>
-        <span class="tech-tag">Offline AI Models</span>
-        <span class="tech-tag">Model Training</span>
-        <span class="tech-tag">Machine Learning</span>
+      <div class="section-label" data-i18n="tech_label">Stack</div>
+      <h2 data-i18n="tech_title">Tools we use in production</h2>
+      <p class="section-sub" data-i18n="tech_sub">Pragmatic choices, picked for the problem — the same stack that powers Opserax.</p>
+      <div class="tech-groups">
+        <div class="tech-group">
+          <h3 data-i18n="tech_g1">Backend</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">PHP · Laravel</span>
+            <span class="tech-tag">Node.js · NestJS</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Rust</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h3 data-i18n="tech_g2">Web & mobile</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Offline sync</span>
+            <span class="tech-tag">Real-time (SSE)</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h3 data-i18n="tech_g3">Data & infrastructure</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Google Cloud</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">GIS</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h3 data-i18n="tech_g4">Identity, integrations & AI</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Keycloak · SSO</span>
+            <span class="tech-tag">OAuth2</span>
+            <span class="tech-tag">Webhooks</span>
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">MCP</span>
+            <span class="tech-tag">AI agents</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <div class="container">
       <div class="section-label" data-i18n="contact_label">Contact</div>
-      <h2 data-i18n="contact_title">Let's build something great</h2>
-      <p class="section-sub" data-i18n="contact_sub">Have a complex project or need a team that takes ownership? Reach out.</p>
+      <h2 data-i18n="contact_title">Tell us what you need to build.</h2>
+      <p class="section-sub" data-i18n="contact_sub">A new product, a platform that needs to scale, or a system that has to talk to everything else — we reply within one business day.</p>
       <div class="contact-grid">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contactForm">
           <div>
             <label for="name" data-i18n="form_name">Name</label>
             <input type="text" id="name" name="name" data-i18n-placeholder="form_name_ph" placeholder="Your name" required>
           </div>
           <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            <label for="company" data-i18n="form_company">Company</label>
+            <input type="text" id="company" name="company" data-i18n-placeholder="form_company_ph" placeholder="Company (optional)">
+          </div>
+          <div>
+            <label for="topic" data-i18n="form_topic">Subject</label>
+            <select id="topic" name="topic">
+              <option value="project" data-i18n="form_topic_project">A software project</option>
+              <option value="opserax" data-i18n="form_topic_opserax">Opserax</option>
+              <option value="other" data-i18n="form_topic_other">Something else</option>
+            </select>
           </div>
           <div>
             <label for="message" data-i18n="form_message">Message</label>
             <textarea id="message" name="message" data-i18n-placeholder="form_message_ph" placeholder="Tell us about your project..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:fit-content;" data-i18n="form_submit">Send Message</button>
+          <button type="submit" class="btn btn-primary" style="width:fit-content;" data-i18n="form_submit">Send message</button>
+          <p class="form-note" data-i18n="form_note">This opens your email app with the message ready to send.</p>
         </form>
         <div>
           <div class="contact-info-item">
@@ -642,20 +1041,23 @@
             <p><a href="mailto:angelo@codebethel.com">angelo@codebethel.com</a></p>
           </div>
           <div class="contact-info-item">
-            <h4 data-i18n="info_location">Location</h4>
-            <p data-i18n="info_location_desc">Distributed team across Europe</p>
-          </div>
-          <div class="contact-info-item">
-            <h4 data-i18n="info_availability">Availability</h4>
-            <p data-i18n="info_availability_desc">Open to freelance, contract, and consulting engagements with European and international teams.</p>
-          </div>
-          <div class="contact-info-item">
             <h4>WhatsApp</h4>
             <p><a href="https://wa.me/5551999505437" target="_blank" rel="noopener noreferrer" data-i18n="info_whatsapp">Message on WhatsApp</a></p>
           </div>
           <div class="contact-info-item">
             <h4>LinkedIn</h4>
-            <p><a href="https://www.linkedin.com/in/angelo-lencina/" target="_blank" rel="noopener noreferrer" data-i18n="info_linkedin">Connect on LinkedIn</a></p>
+            <p>
+              <a href="https://www.linkedin.com/company/112560107/" target="_blank" rel="noopener noreferrer">Codebethel</a> ·
+              <a href="https://www.linkedin.com/in/angelo-lencina/" target="_blank" rel="noopener noreferrer">Angelo Lencina</a>
+            </p>
+          </div>
+          <div class="contact-info-item">
+            <h4 data-i18n="info_opserax">Interested in Opserax?</h4>
+            <p><a href="https://opserax.com/en/demo" data-i18n-href="opserax_demo_href" target="_blank" rel="noopener" data-i18n="info_opserax_link">Book a demo at opserax.com ↗</a></p>
+          </div>
+          <div class="contact-info-item">
+            <h4 data-i18n="info_location">Where we work</h4>
+            <p data-i18n="info_location_desc">Remote-first, serving clients in Brazil, Europe and beyond.</p>
           </div>
         </div>
       </div>
@@ -670,260 +1072,457 @@
   </a>
 
   <footer>
-    <p data-i18n="footer">&copy; 2026 Codebethel. All rights reserved.</p>
-    <p class="footer-product"><a href="https://opserax.com" data-i18n-href="opserax_href">Opserax</a> <span data-i18n="footer_product">— facility and maintenance management software by Codebethel</span></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><img src="/logo.png" alt="Codebethel logo">code<span>bethel</span></a>
+        <p data-i18n="footer_tagline">Software house and product studio since 2018. Creators of Opserax.</p>
+      </div>
+      <div>
+        <h4>Opserax</h4>
+        <ul>
+          <li><a href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener">opserax.com ↗</a></li>
+          <li><a href="https://opserax.com/en/demo" data-i18n-href="opserax_demo_href" target="_blank" rel="noopener" data-i18n="footer_demo">Book a demo</a></li>
+          <li><a href="https://opserax.com/en/security" data-i18n-href="opserax_security_href" target="_blank" rel="noopener" data-i18n="footer_security">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Codebethel</h4>
+        <ul>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#process" data-i18n="nav_process">How we work</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/112560107/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer">© 2026 Codebethel. All rights reserved.</span>
+      <span><a href="https://opserax.com/en" data-i18n-href="opserax_href" target="_blank" rel="noopener">Opserax</a> <span data-i18n="footer_product">— facility and maintenance management software by Codebethel</span></span>
+    </div>
   </footer>
 
   <script>
     // ===== TRANSLATIONS =====
     const translations = {
       en: {
+        nav_product: "Opserax",
         nav_services: "Services",
+        nav_process: "How we work",
         nav_about: "About",
-        nav_stack: "Stack",
         nav_contact: "Contact",
-        nav_products: "Products",
-        products_label: "Products",
-        products_title: "Software we build and run ourselves",
-        products_sub: "Beyond client work, Codebethel develops and operates its own product.",
-        opserax_desc: "Facility and maintenance management software: service requests, work orders, preventive maintenance and asset management, with proof of execution from the field — fully offline on mobile.",
-        opserax_cta: "Visit opserax.com →",
-        opserax_href: "https://opserax.com",
-        footer_product: "— facility and maintenance management software by Codebethel",
-        hero_badge: "Software Development & Consulting",
-        hero_title: "Engineering that solves the hard problems.",
-        hero_sub: "We build complex, production-grade applications where performance, scalability, and maintainability are non-negotiable. A distributed team working with clients across Europe and beyond.",
-        hero_cta1: "Let's Connect",
-        hero_cta2: "See What We Do",
+        opserax_href: "https://opserax.com/en",
+        opserax_demo_href: "https://opserax.com/en/demo",
+        opserax_security_href: "https://opserax.com/en/security",
+        hero_badge: "Software house · Since 2018",
+        hero_title: "We build software that <span class=\"hl\">runs real operations.</span>",
+        hero_sub: "Codebethel designs, builds and operates production software on demand — SaaS platforms, offline-first mobile apps, integrations and AI. We ship for clients, and we run our own product, Opserax, in production every day.",
+        hero_cta1: "Start a project",
+        hero_cta2: "Discover Opserax ↗",
+        hero_product: "facility & maintenance management, built by Codebethel",
+        opserax_label: "Our product",
+        opserax_live: "In production",
+        opserax_title: "Maintenance and facilities, from the request to the signed work order.",
+        opserax_sub: "Opserax replaces spreadsheets, WhatsApp groups and disconnected systems with one workspace for service requests, work orders, preventive maintenance and assets. Field teams work on mobile — even offline — while managers see everything in real time.",
+        opx_f1: "Executive dashboard with KPIs and trends",
+        opx_f2: "Preventive maintenance that schedules itself",
+        opx_f3: "Assets with QR codes, location and custom forms",
+        opx_f4: "Work orders in kanban, list, calendar and map",
+        opx_f5: "Service requests with business-hours SLA",
+        opx_f6: "Audit-ready reports in Excel and PDF",
+        opx_t1: "Web + mobile",
+        opx_t2: "Offline-first",
+        opx_t3: "Real time",
+        opx_t4: "Isolated database per client",
+        opx_t5: "SSO per tenant",
+        opx_t6: "OpsBridge integrations",
+        opserax_cta: "Visit opserax.com ↗",
+        opserax_demo: "Book a demo",
+        opserax_img_alt: "Opserax executive dashboard with work order KPIs and trends",
+        opserax_phone_alt: "Opserax mobile app in the hands of a field technician",
         services_label: "Services",
-        services_title: "What we bring to the table",
-        services_sub: "From diagnosis to delivery — we take ownership of the parts most engineers avoid.",
-        svc1_title: "Performance Optimization",
-        svc1_desc: "Rethinking data flows, reducing unnecessary processing, and restructuring component boundaries to make your application faster — not just shippable.",
-        svc2_title: "Complex Problem Diagnosis",
-        svc2_desc: "Cascading state failures, performance degradation at scale, integration conflicts — we trace issues to their root and implement solutions that last.",
-        svc3_title: "Architecture & Refactoring",
-        svc3_desc: "Modernizing legacy codebases without disrupting existing behavior. Clean architecture applied to real-world constraints.",
-        svc4_title: "Full-Stack Development",
-        svc4_desc: "End-to-end product engineering across geospatial systems, document generation, business platforms, authentication, and real-time data sync.",
-        svc5_title: "Technical Consulting",
-        svc5_desc: "Strategic advice on architecture decisions, tech debt management, and scaling challenges. We help teams make better engineering choices.",
-        svc6_title: "Team Integration",
-        svc6_desc: "Comfortable in distributed, cross-functional environments across European and international teams.",
-        svc7_title: "AI Product Development",
-        svc7_desc: "Building AI-powered products with MCP integrations, API-driven workflows, offline model deployment, and custom model training pipelines for real-world applications.",
+        services_title: "Products on demand, built the way we build our own.",
+        services_sub: "The same engineering behind Opserax, applied to your problem. We take ownership from the first conversation to production — and stay for what comes after.",
+        svc1_title: "Product development",
+        svc1_desc: "From idea to production: discovery, MVP, launch and continuous evolution. A small senior team that writes the code and owns the outcome.",
+        svc2_title: "SaaS & multi-tenant platforms",
+        svc2_desc: "Tenant isolation, per-client identity and SSO, roles and permissions, billing-ready plans and the operational tooling a real SaaS needs.",
+        svc3_title: "Offline-first mobile apps",
+        svc3_desc: "iOS and Android apps for field teams that keep working without signal and sync safely when they reconnect — photos, signatures, QR codes and all.",
+        svc4_title: "Integrations & APIs",
+        svc4_desc: "ERPs, service desks, identity providers and BI. OAuth2, signed webhooks, queues and audit logs — so your systems finally talk to each other.",
+        svc5_title: "AI in real products",
+        svc5_desc: "LLM features, agents and MCP integrations shipped to production — with guardrails, evaluation and costs under control, not just demos.",
+        svc6_title: "Architecture, performance & rescue",
+        svc6_desc: "Diagnosing hard problems, modernizing legacy codebases without breaking behaviour, and cutting cloud costs. Root causes, not workarounds.",
+        process_label: "How we work",
+        process_title: "Short cycles, working software, no surprises.",
+        process_sub: "We work like a product team, not a ticket queue. You see progress running in a real environment every cycle.",
+        step1_title: "Discovery",
+        step1_desc: "We map the operation, the users and the constraints, and agree on what success looks like.",
+        step2_title: "Build in cycles",
+        step2_desc: "Small, frequent deliveries you can use and review — with tests and CI from day one.",
+        step3_title: "Ship to production",
+        step3_desc: "Infrastructure, monitoring, security and data migration handled — launch is a non-event.",
+        step4_title: "Operate & evolve",
+        step4_desc: "We support what we ship and keep improving it, the same way we run Opserax.",
         about_label: "About",
-        about_title: "Software Development Team",
-        about_p1: "Our work sits at the intersection of clean architecture and real-world constraints. We don't just fix symptoms — we trace issues to their root and implement solutions that last.",
-        about_p2: "We've led refactoring initiatives that modernize legacy codebases without disrupting existing behavior, and we apply consistent engineering principles regardless of the domain.",
-        about_p3: "That versatility is something we've built intentionally. Adapting to different technical and business contexts while maintaining the same engineering rigor has made us a more complete team and stronger collaborators.",
-        stat_years: "Years Experience",
-        stat_projects: "Projects Delivered",
-        stat_location: "Team across Europe",
-        tech_label: "Tech Stack",
-        tech_title: "Tools we work with",
-        tech_sub: "Domain-agnostic engineering with a focus on what gets the job done right.",
+        about_title: "A software house that also runs its own product.",
+        about_p1: "Codebethel was founded in 2018 to build software on demand for companies that need more than a vendor: a team that understands the business and takes ownership of the result.",
+        about_p2: "Running Opserax ourselves keeps us honest. Every day we deal with what clients deal with — uptime, support, integrations, costs and users in the field — and that experience goes straight into the projects we build for others.",
+        about_p3: "Want to see our work in production?",
+        about_link: "Open opserax.com ↗",
+        stat_founded: "Founded",
+        stat_years: "Years of engineering experience",
+        stat_projects: "Projects delivered",
+        stat_location: "Clients in Brazil, Europe and beyond",
+        tech_label: "Stack",
+        tech_title: "Tools we use in production",
+        tech_sub: "Pragmatic choices, picked for the problem — the same stack that powers Opserax.",
+        tech_g1: "Backend",
+        tech_g2: "Web & mobile",
+        tech_g3: "Data & infrastructure",
+        tech_g4: "Identity, integrations & AI",
         contact_label: "Contact",
-        contact_title: "Let's build something great",
-        contact_sub: "Have a complex project or need a team that takes ownership? Reach out.",
+        contact_title: "Tell us what you need to build.",
+        contact_sub: "A new product, a platform that needs to scale, or a system that has to talk to everything else — we reply within one business day.",
         form_name: "Name",
         form_name_ph: "Your name",
+        form_company: "Company",
+        form_company_ph: "Company (optional)",
+        form_topic: "Subject",
+        form_topic_project: "A software project",
+        form_topic_opserax: "Opserax",
+        form_topic_other: "Something else",
         form_message: "Message",
         form_message_ph: "Tell us about your project...",
-        form_submit: "Send Message",
-        info_location: "Location",
-        info_location_desc: "Distributed team across Europe",
-        info_availability: "Availability",
-        info_availability_desc: "Open to freelance, contract, and consulting engagements with European and international teams.",
+        form_submit: "Send message",
+        form_note: "This opens your email app with the message ready to send.",
         info_whatsapp: "Message on WhatsApp",
-        info_linkedin: "Connect on LinkedIn",
-        footer: "\u00a9 2026 Codebethel. All rights reserved."
+        info_opserax: "Interested in Opserax?",
+        info_opserax_link: "Book a demo at opserax.com ↗",
+        info_location: "Where we work",
+        info_location_desc: "Remote-first, serving clients in Brazil, Europe and beyond.",
+        footer_tagline: "Software house and product studio since 2018. Creators of Opserax.",
+        footer_demo: "Book a demo",
+        footer_security: "Security",
+        footer: "© 2026 Codebethel. All rights reserved.",
+        footer_product: "— facility and maintenance management software by Codebethel",
+        mail_subject: "Contact via codebethel.com"
       },
       pt: {
-        nav_services: "Servi\u00e7os",
+        nav_product: "Opserax",
+        nav_services: "Serviços",
+        nav_process: "Como trabalhamos",
         nav_about: "Sobre",
-        nav_stack: "Tecnologias",
         nav_contact: "Contacto",
-        nav_products: "Produtos",
-        products_label: "Produtos",
-        products_title: "Software que construímos e operamos",
-        products_sub: "Além dos projetos para clientes, a Codebethel desenvolve e opera o seu próprio produto.",
-        opserax_desc: "Software de gestão de facilities e manutenção: pedidos, ordens de trabalho, manutenção preventiva e gestão de ativos, com prova de execução no terreno — totalmente offline no telemóvel.",
-        opserax_cta: "Visitar opserax.com →",
-        opserax_href: "https://opserax.com/pt",
-        footer_product: "— software de gestão de facilities e manutenção da Codebethel",
-        hero_badge: "Desenvolvimento de Software & Consultoria",
-        hero_title: "Engenharia que resolve os problemas dif\u00edceis.",
-        hero_sub: "Constru\u00edmos aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Uma equipa distribu\u00edda a trabalhar com clientes por toda a Europa e al\u00e9m.",
-        hero_cta1: "Vamos Conversar",
-        hero_cta2: "Ver O Que Fazemos",
-        services_label: "Servi\u00e7os",
-        services_title: "O que trazemos para a mesa",
-        services_sub: "Do diagn\u00f3stico \u00e0 entrega \u2014 assumimos a responsabilidade pelas partes que a maioria dos engenheiros evita.",
-        svc1_title: "Otimiza\u00e7\u00e3o de Performance",
-        svc1_desc: "Repensar fluxos de dados, reduzir processamento desnecess\u00e1rio e reestruturar fronteiras de componentes para tornar a sua aplica\u00e7\u00e3o mais r\u00e1pida \u2014 n\u00e3o apenas entreg\u00e1vel.",
-        svc2_title: "Diagn\u00f3stico de Problemas Complexos",
-        svc2_desc: "Falhas de estado em cascata, degrada\u00e7\u00e3o de performance em escala, conflitos de integra\u00e7\u00e3o \u2014 tra\u00e7amos os problemas at\u00e9 \u00e0 raiz e implementamos solu\u00e7\u00f5es duradouras.",
-        svc3_title: "Arquitetura & Refactoring",
-        svc3_desc: "Modernizar codebases legadas sem comprometer o comportamento existente. Arquitetura limpa aplicada a restri\u00e7\u00f5es do mundo real.",
-        svc4_title: "Desenvolvimento Full-Stack",
-        svc4_desc: "Engenharia de produto de ponta a ponta em sistemas geoespaciais, gera\u00e7\u00e3o de documentos, plataformas de neg\u00f3cio, autentica\u00e7\u00e3o e sincroniza\u00e7\u00e3o de dados em tempo real.",
-        svc5_title: "Consultoria T\u00e9cnica",
-        svc5_desc: "Aconselhamento estrat\u00e9gico sobre decis\u00f5es de arquitetura, gest\u00e3o de d\u00edvida t\u00e9cnica e desafios de escala. Ajudamos equipas a fazer melhores escolhas de engenharia.",
-        svc6_title: "Integra\u00e7\u00e3o em Equipas",
-        svc6_desc: "Confort\u00e1vel em ambientes distribu\u00eddos e multifuncionais em equipas europeias e internacionais.",
-        svc7_title: "Desenvolvimento de Produtos com IA",
-        svc7_desc: "Cria\u00e7\u00e3o de produtos baseados em IA com integra\u00e7\u00f5es MCP, fluxos orientados por API, implementa\u00e7\u00e3o de modelos offline e pipelines de treino de modelos para aplica\u00e7\u00f5es reais.",
+        opserax_href: "https://opserax.com/",
+        opserax_demo_href: "https://opserax.com/demo",
+        opserax_security_href: "https://opserax.com/security",
+        hero_badge: "Software house · Desde 2018",
+        hero_title: "Construímos software que <span class=\"hl\">faz operações reais funcionarem.</span>",
+        hero_sub: "A Codebethel desenha, desenvolve e opera software em produção à medida — plataformas SaaS, aplicações móveis offline-first, integrações e IA. Entregamos para clientes e operamos o nosso próprio produto, o Opserax, todos os dias.",
+        hero_cta1: "Iniciar um projeto",
+        hero_cta2: "Conhecer o Opserax ↗",
+        hero_product: "gestão de facilities e manutenção, feito pela Codebethel",
+        opserax_label: "O nosso produto",
+        opserax_live: "Em produção",
+        opserax_title: "Manutenção e facilities, do pedido à ordem de trabalho assinada.",
+        opserax_sub: "O Opserax substitui folhas de cálculo, grupos de WhatsApp e sistemas desligados por um único espaço de trabalho para pedidos, ordens de trabalho, manutenção preventiva e ativos. As equipas de terreno trabalham no telemóvel — mesmo offline — e os gestores acompanham tudo em tempo real.",
+        opx_f1: "Painel executivo com KPIs e tendências",
+        opx_f2: "Manutenção preventiva que se agenda sozinha",
+        opx_f3: "Ativos com QR code, localização e formulários próprios",
+        opx_f4: "Ordens de trabalho em kanban, lista, calendário e mapa",
+        opx_f5: "Pedidos com SLA em horário comercial",
+        opx_f6: "Relatórios prontos para auditoria em Excel e PDF",
+        opx_t1: "Web + mobile",
+        opx_t2: "Offline-first",
+        opx_t3: "Tempo real",
+        opx_t4: "Base de dados isolada por cliente",
+        opx_t5: "SSO por cliente",
+        opx_t6: "Integrações OpsBridge",
+        opserax_cta: "Visitar opserax.com ↗",
+        opserax_demo: "Agendar demonstração",
+        opserax_img_alt: "Painel executivo do Opserax com KPIs e tendências de ordens de trabalho",
+        opserax_phone_alt: "Aplicação móvel do Opserax nas mãos de um técnico de terreno",
+        services_label: "Serviços",
+        services_title: "Produtos à medida, feitos como fazemos os nossos.",
+        services_sub: "A mesma engenharia por trás do Opserax, aplicada ao seu problema. Assumimos a responsabilidade desde a primeira conversa até à produção — e ficamos para o que vem depois.",
+        svc1_title: "Desenvolvimento de produto",
+        svc1_desc: "Da ideia à produção: discovery, MVP, lançamento e evolução contínua. Uma equipa sénior e pequena que escreve o código e responde pelo resultado.",
+        svc2_title: "Plataformas SaaS multi-tenant",
+        svc2_desc: "Isolamento por cliente, identidade e SSO próprios, perfis e permissões, planos prontos para faturação e as ferramentas operacionais que um SaaS real exige.",
+        svc3_title: "Aplicações móveis offline-first",
+        svc3_desc: "Aplicações iOS e Android para equipas de terreno que continuam a funcionar sem rede e sincronizam com segurança — fotos, assinaturas e QR codes incluídos.",
+        svc4_title: "Integrações & APIs",
+        svc4_desc: "ERPs, service desks, fornecedores de identidade e BI. OAuth2, webhooks assinados, filas e logs de auditoria — para que os seus sistemas finalmente conversem.",
+        svc5_title: "IA em produtos reais",
+        svc5_desc: "Funcionalidades com LLMs, agentes e integrações MCP em produção — com salvaguardas, avaliação e custos controlados, não apenas demos.",
+        svc6_title: "Arquitetura, performance & resgate",
+        svc6_desc: "Diagnóstico de problemas difíceis, modernização de código legado sem quebrar comportamento e redução de custos de cloud. Causas, não remendos.",
+        process_label: "Como trabalhamos",
+        process_title: "Ciclos curtos, software a funcionar, sem surpresas.",
+        process_sub: "Trabalhamos como uma equipa de produto, não como uma fila de tickets. Vê o progresso a correr num ambiente real em cada ciclo.",
+        step1_title: "Discovery",
+        step1_desc: "Mapeamos a operação, os utilizadores e as restrições, e alinhamos o que é sucesso.",
+        step2_title: "Construção em ciclos",
+        step2_desc: "Entregas pequenas e frequentes que pode usar e rever — com testes e CI desde o primeiro dia.",
+        step3_title: "Entrada em produção",
+        step3_desc: "Infraestrutura, monitorização, segurança e migração de dados tratadas — o lançamento é tranquilo.",
+        step4_title: "Operar & evoluir",
+        step4_desc: "Damos suporte ao que entregamos e continuamos a melhorar, tal como fazemos com o Opserax.",
         about_label: "Sobre",
-        about_title: "Equipa de Desenvolvimento de Software",
-        about_p1: "O nosso trabalho est\u00e1 na interse\u00e7\u00e3o entre arquitetura limpa e restri\u00e7\u00f5es do mundo real. N\u00e3o resolvemos apenas sintomas \u2014 tra\u00e7amos os problemas at\u00e9 \u00e0 raiz e implementamos solu\u00e7\u00f5es que duram.",
-        about_p2: "Lider\u00e1mos iniciativas de refactoring que modernizam codebases legadas sem comprometer o comportamento existente, e aplicamos princ\u00edpios de engenharia consistentes independentemente do dom\u00ednio.",
-        about_p3: "Essa versatilidade \u00e9 algo que constru\u00edmos intencionalmente. Adaptarmo-nos a diferentes contextos t\u00e9cnicos e de neg\u00f3cio mantendo o mesmo rigor de engenharia tornou-nos uma equipa mais completa e melhores colaboradores.",
-        stat_years: "Anos de Experi\u00eancia",
-        stat_projects: "Projetos Entregues",
-        stat_location: "Equipa pela Europa",
-        tech_label: "Tecnologias",
-        tech_title: "Ferramentas com que trabalhamos",
-        tech_sub: "Engenharia agn\u00f3stica ao dom\u00ednio com foco no que funciona bem.",
+        about_title: "Uma software house que também opera o seu próprio produto.",
+        about_p1: "A Codebethel nasceu em 2018 para desenvolver software à medida para empresas que precisam de mais do que um fornecedor: uma equipa que entende o negócio e assume o resultado.",
+        about_p2: "Operar o Opserax mantém-nos com os pés no chão. Todos os dias lidamos com o mesmo que os nossos clientes — disponibilidade, suporte, integrações, custos e utilizadores no terreno — e essa experiência vai direta para os projetos que fazemos para terceiros.",
+        about_p3: "Quer ver o nosso trabalho em produção?",
+        about_link: "Abrir opserax.com ↗",
+        stat_founded: "Fundação",
+        stat_years: "Anos de experiência em engenharia",
+        stat_projects: "Projetos entregues",
+        stat_location: "Clientes no Brasil, na Europa e não só",
+        tech_label: "Stack",
+        tech_title: "Ferramentas que usamos em produção",
+        tech_sub: "Escolhas pragmáticas, à medida do problema — a mesma stack que sustenta o Opserax.",
+        tech_g1: "Backend",
+        tech_g2: "Web & mobile",
+        tech_g3: "Dados & infraestrutura",
+        tech_g4: "Identidade, integrações & IA",
         contact_label: "Contacto",
-        contact_title: "Vamos construir algo grande",
-        contact_sub: "Tem um projeto complexo ou precisa de uma equipa que assume responsabilidade? Entre em contacto.",
+        contact_title: "Conte-nos o que precisa de construir.",
+        contact_sub: "Um produto novo, uma plataforma que precisa de escalar ou um sistema que tem de falar com todos os outros — respondemos num dia útil.",
         form_name: "Nome",
         form_name_ph: "O seu nome",
+        form_company: "Empresa",
+        form_company_ph: "Empresa (opcional)",
+        form_topic: "Assunto",
+        form_topic_project: "Um projeto de software",
+        form_topic_opserax: "Opserax",
+        form_topic_other: "Outro assunto",
         form_message: "Mensagem",
         form_message_ph: "Conte-nos sobre o seu projeto...",
-        form_submit: "Enviar Mensagem",
-        info_location: "Localiza\u00e7\u00e3o",
-        info_location_desc: "Equipa distribu\u00edda pela Europa",
-        info_availability: "Disponibilidade",
-        info_availability_desc: "Dispon\u00edvel para freelance, contrato e consultoria com equipas europeias e internacionais.",
+        form_submit: "Enviar mensagem",
+        form_note: "Abre a sua aplicação de email com a mensagem pronta a enviar.",
         info_whatsapp: "Enviar mensagem no WhatsApp",
-        info_linkedin: "Conectar no LinkedIn",
-        footer: "\u00a9 2026 Codebethel. Todos os direitos reservados."
+        info_opserax: "Interessado no Opserax?",
+        info_opserax_link: "Agende uma demonstração em opserax.com ↗",
+        info_location: "Onde trabalhamos",
+        info_location_desc: "Remote-first, com clientes no Brasil, na Europa e não só.",
+        footer_tagline: "Software house e estúdio de produto desde 2018. Criadores do Opserax.",
+        footer_demo: "Agendar demonstração",
+        footer_security: "Segurança",
+        footer: "© 2026 Codebethel. Todos os direitos reservados.",
+        footer_product: "— software de gestão de facilities e manutenção da Codebethel",
+        mail_subject: "Contacto via codebethel.com"
       },
       "pt-BR": {
-        nav_services: "Servi\u00e7os",
+        nav_product: "Opserax",
+        nav_services: "Serviços",
+        nav_process: "Como trabalhamos",
         nav_about: "Sobre",
-        nav_stack: "Tecnologias",
         nav_contact: "Contato",
-        nav_products: "Produtos",
-        products_label: "Produtos",
-        products_title: "Software que construímos e operamos",
-        products_sub: "Além dos projetos para clientes, a Codebethel desenvolve e opera o próprio produto.",
-        opserax_desc: "Software de gestão de facilities e manutenção: chamados, ordens de serviço, manutenção preventiva e gestão de ativos, com prova de execução em campo — 100% offline no celular.",
-        opserax_cta: "Conhecer o Opserax →",
-        opserax_href: "https://opserax.com/pt",
-        footer_product: "— software de gestão de facilities e manutenção da Codebethel",
-        hero_badge: "Desenvolvimento de Software & Consultoria",
-        hero_title: "Engenharia que resolve os problemas dif\u00edceis.",
-        hero_sub: "Constru\u00edmos aplica\u00e7\u00f5es complexas e prontas para produ\u00e7\u00e3o, onde performance, escalabilidade e manutenibilidade n\u00e3o s\u00e3o negoci\u00e1veis. Um time distribu\u00eddo trabalhando com clientes por toda a Europa e al\u00e9m.",
-        hero_cta1: "Vamos Conversar",
-        hero_cta2: "Veja O Que Fazemos",
-        services_label: "Servi\u00e7os",
-        services_title: "O que trazemos para a mesa",
-        services_sub: "Do diagn\u00f3stico \u00e0 entrega \u2014 assumimos a responsabilidade pelas partes que a maioria dos engenheiros evita.",
-        svc1_title: "Otimiza\u00e7\u00e3o de Performance",
-        svc1_desc: "Repensar fluxos de dados, reduzir processamento desnecess\u00e1rio e reestruturar fronteiras de componentes para tornar a sua aplica\u00e7\u00e3o mais r\u00e1pida \u2014 n\u00e3o apenas entreg\u00e1vel.",
-        svc2_title: "Diagn\u00f3stico de Problemas Complexos",
-        svc2_desc: "Falhas de estado em cascata, degrada\u00e7\u00e3o de performance em escala, conflitos de integra\u00e7\u00e3o \u2014 tra\u00e7amos os problemas at\u00e9 a raiz e implementamos solu\u00e7\u00f5es duradouras.",
-        svc3_title: "Arquitetura & Refatora\u00e7\u00e3o",
-        svc3_desc: "Modernizar codebases legados sem comprometer o comportamento existente. Arquitetura limpa aplicada a restri\u00e7\u00f5es do mundo real.",
-        svc4_title: "Desenvolvimento Full-Stack",
-        svc4_desc: "Engenharia de produto de ponta a ponta em sistemas geoespaciais, gera\u00e7\u00e3o de documentos, plataformas de neg\u00f3cio, autentica\u00e7\u00e3o e sincroniza\u00e7\u00e3o de dados em tempo real.",
-        svc5_title: "Consultoria T\u00e9cnica",
-        svc5_desc: "Aconselhamento estrat\u00e9gico sobre decis\u00f5es de arquitetura, gest\u00e3o de d\u00edvida t\u00e9cnica e desafios de escala. Ajudamos times a fazer melhores escolhas de engenharia.",
-        svc6_title: "Integra\u00e7\u00e3o em Times",
-        svc6_desc: "Confort\u00e1veis em ambientes distribu\u00eddos e multifuncionais em times europeus e internacionais.",
-        svc7_title: "Desenvolvimento de Produtos com IA",
-        svc7_desc: "Cria\u00e7\u00e3o de produtos baseados em IA com integra\u00e7\u00f5es MCP, fluxos orientados por API, implanta\u00e7\u00e3o de modelos offline e pipelines de treinamento de modelos para aplica\u00e7\u00f5es reais.",
+        opserax_href: "https://opserax.com/",
+        opserax_demo_href: "https://opserax.com/demo",
+        opserax_security_href: "https://opserax.com/security",
+        hero_badge: "Software house · Desde 2018",
+        hero_title: "Construímos software que <span class=\"hl\">roda operações de verdade.</span>",
+        hero_sub: "A Codebethel desenha, desenvolve e opera software em produção sob demanda — plataformas SaaS, apps mobile offline-first, integrações e IA. Entregamos para clientes e operamos nosso próprio produto, o Opserax, todos os dias.",
+        hero_cta1: "Começar um projeto",
+        hero_cta2: "Conhecer o Opserax ↗",
+        hero_product: "gestão de facilities e manutenção, feito pela Codebethel",
+        opserax_label: "Nosso produto",
+        opserax_live: "Em produção",
+        opserax_title: "Manutenção e facilities, do chamado à ordem de serviço assinada.",
+        opserax_sub: "O Opserax substitui planilhas, grupos de WhatsApp e sistemas que não conversam por um único workspace para chamados, ordens de serviço, manutenção preventiva e ativos. A equipe de campo trabalha no celular — mesmo offline — e os gestores acompanham tudo em tempo real.",
+        opx_f1: "Dashboard executivo com KPIs e tendências",
+        opx_f2: "Manutenção preventiva que se agenda sozinha",
+        opx_f3: "Ativos com QR Code, geolocalização e formulários por tipo",
+        opx_f4: "Ordens de serviço em kanban, lista, calendário e mapa",
+        opx_f5: "Chamados com SLA em horário comercial",
+        opx_f6: "Relatórios prontos para auditoria em Excel e PDF",
+        opx_t1: "Web + mobile",
+        opx_t2: "Offline-first",
+        opx_t3: "Tempo real",
+        opx_t4: "Banco isolado por cliente",
+        opx_t5: "SSO por cliente",
+        opx_t6: "Integrações OpsBridge",
+        opserax_cta: "Acessar opserax.com ↗",
+        opserax_demo: "Agendar demo",
+        opserax_img_alt: "Dashboard executivo do Opserax com KPIs e tendências de ordens de serviço",
+        opserax_phone_alt: "App mobile do Opserax na mão de um técnico de campo",
+        services_label: "Serviços",
+        services_title: "Produtos sob demanda, feitos do jeito que fazemos os nossos.",
+        services_sub: "A mesma engenharia por trás do Opserax, aplicada ao seu problema. Assumimos a responsabilidade da primeira conversa até a produção — e ficamos para o que vem depois.",
+        svc1_title: "Desenvolvimento de produto",
+        svc1_desc: "Da ideia à produção: discovery, MVP, lançamento e evolução contínua. Um time sênior e enxuto que escreve o código e responde pelo resultado.",
+        svc2_title: "Plataformas SaaS multi-tenant",
+        svc2_desc: "Isolamento por cliente, identidade e SSO próprios, papéis e permissões, planos prontos para cobrança e o ferramental operacional que um SaaS de verdade exige.",
+        svc3_title: "Apps mobile offline-first",
+        svc3_desc: "Apps iOS e Android para equipes de campo que continuam funcionando sem sinal e sincronizam com segurança — fotos, assinaturas e QR Codes incluídos.",
+        svc4_title: "Integrações & APIs",
+        svc4_desc: "ERPs, service desks, provedores de identidade e BI. OAuth2, webhooks assinados, filas e logs de auditoria — para seus sistemas finalmente conversarem.",
+        svc5_title: "IA em produtos reais",
+        svc5_desc: "Funcionalidades com LLMs, agentes e integrações MCP em produção — com guardrails, avaliação e custo sob controle, não só demos.",
+        svc6_title: "Arquitetura, performance & resgate",
+        svc6_desc: "Diagnóstico de problemas difíceis, modernização de código legado sem quebrar comportamento e redução de custo de cloud. Causa raiz, não gambiarra.",
+        process_label: "Como trabalhamos",
+        process_title: "Ciclos curtos, software funcionando, sem surpresas.",
+        process_sub: "Trabalhamos como um time de produto, não como uma fila de tickets. Você vê o progresso rodando em ambiente real a cada ciclo.",
+        step1_title: "Discovery",
+        step1_desc: "Mapeamos a operação, os usuários e as restrições, e alinhamos o que é sucesso.",
+        step2_title: "Construção em ciclos",
+        step2_desc: "Entregas pequenas e frequentes que você usa e valida — com testes e CI desde o primeiro dia.",
+        step3_title: "Produção",
+        step3_desc: "Infraestrutura, monitoramento, segurança e migração de dados resolvidos — o lançamento é tranquilo.",
+        step4_title: "Operar & evoluir",
+        step4_desc: "Damos suporte ao que entregamos e seguimos melhorando, do mesmo jeito que fazemos com o Opserax.",
         about_label: "Sobre",
-        about_title: "Time de Desenvolvimento de Software",
-        about_p1: "Nosso trabalho est\u00e1 na interse\u00e7\u00e3o entre arquitetura limpa e restri\u00e7\u00f5es do mundo real. N\u00e3o resolvemos apenas sintomas \u2014 tra\u00e7amos os problemas at\u00e9 a raiz e implementamos solu\u00e7\u00f5es que duram.",
-        about_p2: "Lideramos iniciativas de refatora\u00e7\u00e3o que modernizam codebases legados sem comprometer o comportamento existente, e aplicamos princ\u00edpios de engenharia consistentes independentemente do dom\u00ednio.",
-        about_p3: "Essa versatilidade \u00e9 algo que constru\u00edmos intencionalmente. Nos adaptar a diferentes contextos t\u00e9cnicos e de neg\u00f3cio mantendo o mesmo rigor de engenharia nos tornou um time mais completo e melhores colaboradores.",
-        stat_years: "Anos de Experi\u00eancia",
-        stat_projects: "Projetos Entregues",
-        stat_location: "Time pela Europa",
-        tech_label: "Tecnologias",
-        tech_title: "Ferramentas com que trabalhamos",
-        tech_sub: "Engenharia agn\u00f3stica ao dom\u00ednio com foco no que funciona bem.",
+        about_title: "Uma software house que também opera o próprio produto.",
+        about_p1: "A Codebethel nasceu em 2018 para desenvolver software sob demanda para empresas que precisam de mais do que um fornecedor: um time que entende o negócio e assume o resultado.",
+        about_p2: "Operar o Opserax mantém a gente com o pé no chão. Todo dia lidamos com o mesmo que nossos clientes — disponibilidade, suporte, integrações, custo e usuários em campo — e essa experiência vai direto para os projetos que fazemos para terceiros.",
+        about_p3: "Quer ver nosso trabalho em produção?",
+        about_link: "Acessar opserax.com ↗",
+        stat_founded: "Fundação",
+        stat_years: "Anos de experiência em engenharia",
+        stat_projects: "Projetos entregues",
+        stat_location: "Clientes no Brasil, na Europa e além",
+        tech_label: "Stack",
+        tech_title: "Ferramentas que usamos em produção",
+        tech_sub: "Escolhas pragmáticas, sob medida para o problema — a mesma stack que roda o Opserax.",
+        tech_g1: "Backend",
+        tech_g2: "Web & mobile",
+        tech_g3: "Dados & infraestrutura",
+        tech_g4: "Identidade, integrações & IA",
         contact_label: "Contato",
-        contact_title: "Vamos construir algo grande",
-        contact_sub: "Tem um projeto complexo ou precisa de um time que assume responsabilidade? Entre em contato.",
+        contact_title: "Conta pra gente o que você precisa construir.",
+        contact_sub: "Um produto novo, uma plataforma que precisa escalar ou um sistema que tem que conversar com todos os outros — respondemos em até um dia útil.",
         form_name: "Nome",
         form_name_ph: "Seu nome",
+        form_company: "Empresa",
+        form_company_ph: "Empresa (opcional)",
+        form_topic: "Assunto",
+        form_topic_project: "Um projeto de software",
+        form_topic_opserax: "Opserax",
+        form_topic_other: "Outro assunto",
         form_message: "Mensagem",
-        form_message_ph: "Conte-nos sobre o seu projeto...",
-        form_submit: "Enviar Mensagem",
-        info_location: "Localiza\u00e7\u00e3o",
-        info_location_desc: "Time distribu\u00eddo pela Europa",
-        info_availability: "Disponibilidade",
-        info_availability_desc: "Dispon\u00edveis para freelance, contrato e consultoria com times europeus e internacionais.",
-        info_whatsapp: "Enviar mensagem no WhatsApp",
-        info_linkedin: "Conectar no LinkedIn",
-        footer: "\u00a9 2026 Codebethel. Todos os direitos reservados."
+        form_message_ph: "Conte sobre o seu projeto...",
+        form_submit: "Enviar mensagem",
+        form_note: "Abre seu app de e-mail com a mensagem pronta para enviar.",
+        info_whatsapp: "Chamar no WhatsApp",
+        info_opserax: "Interesse no Opserax?",
+        info_opserax_link: "Agende uma demo em opserax.com ↗",
+        info_location: "Onde atuamos",
+        info_location_desc: "Remote-first, com clientes no Brasil, na Europa e além.",
+        footer_tagline: "Software house e estúdio de produto desde 2018. Criadores do Opserax.",
+        footer_demo: "Agendar demo",
+        footer_security: "Segurança",
+        footer: "© 2026 Codebethel. Todos os direitos reservados.",
+        footer_product: "— software de gestão de facilities e manutenção da Codebethel",
+        mail_subject: "Contato via codebethel.com"
       },
       de: {
+        nav_product: "Opserax",
         nav_services: "Leistungen",
-        nav_about: "\u00dcber uns",
-        nav_stack: "Technologien",
+        nav_process: "Arbeitsweise",
+        nav_about: "Über uns",
         nav_contact: "Kontakt",
-        nav_products: "Produkte",
-        products_label: "Produkte",
-        products_title: "Software, die wir selbst bauen und betreiben",
-        products_sub: "Neben Kundenprojekten entwickelt und betreibt Codebethel ein eigenes Produkt.",
-        opserax_desc: "Software für Facility- und Instandhaltungsmanagement: Meldungen, Arbeitsaufträge, vorbeugende Wartung und Verwaltung von Vermögenswerten, mit Ausführungsnachweis aus dem Feld — vollständig offline auf dem Smartphone.",
-        opserax_cta: "opserax.com besuchen →",
-        opserax_href: "https://opserax.com",
-        footer_product: "— Software für Facility- und Instandhaltungsmanagement von Codebethel",
-        hero_badge: "Softwareentwicklung & Beratung",
-        hero_title: "Engineering, das die schwierigen Probleme l\u00f6st.",
-        hero_sub: "Wir entwickeln komplexe, produktionsreife Anwendungen, bei denen Performance, Skalierbarkeit und Wartbarkeit nicht verhandelbar sind. Ein verteiltes Team, t\u00e4tig mit Kunden in ganz Europa und dar\u00fcber hinaus.",
-        hero_cta1: "Kontakt aufnehmen",
-        hero_cta2: "Unsere Leistungen",
+        opserax_href: "https://opserax.com/en",
+        opserax_demo_href: "https://opserax.com/en/demo",
+        opserax_security_href: "https://opserax.com/en/security",
+        hero_badge: "Softwarehaus · Seit 2018",
+        hero_title: "Wir bauen Software, <span class=\"hl\">die echte Abläufe trägt.</span>",
+        hero_sub: "Codebethel konzipiert, entwickelt und betreibt produktive Software nach Maß — SaaS-Plattformen, Offline-first-Mobile-Apps, Integrationen und KI. Wir liefern für Kunden und betreiben täglich unser eigenes Produkt, Opserax.",
+        hero_cta1: "Projekt starten",
+        hero_cta2: "Opserax entdecken ↗",
+        hero_product: "Facility- und Instandhaltungsmanagement, entwickelt von Codebethel",
+        opserax_label: "Unser Produkt",
+        opserax_live: "Im Einsatz",
+        opserax_title: "Instandhaltung und Facility Management — von der Meldung bis zum unterschriebenen Auftrag.",
+        opserax_sub: "Opserax ersetzt Tabellen, WhatsApp-Gruppen und isolierte Systeme durch einen Arbeitsbereich für Meldungen, Arbeitsaufträge, vorbeugende Wartung und Vermögenswerte. Außendienstteams arbeiten mobil — auch offline — und Verantwortliche sehen alles in Echtzeit.",
+        opx_f1: "Management-Dashboard mit KPIs und Trends",
+        opx_f2: "Vorbeugende Wartung, die sich selbst plant",
+        opx_f3: "Vermögenswerte mit QR-Code, Standort und eigenen Formularen",
+        opx_f4: "Arbeitsaufträge als Kanban, Liste, Kalender und Karte",
+        opx_f5: "Meldungen mit SLA nach Geschäftszeiten",
+        opx_f6: "Prüfungsfähige Berichte in Excel und PDF",
+        opx_t1: "Web + Mobile",
+        opx_t2: "Offline-first",
+        opx_t3: "Echtzeit",
+        opx_t4: "Eigene Datenbank pro Kunde",
+        opx_t5: "SSO pro Mandant",
+        opx_t6: "OpsBridge-Integrationen",
+        opserax_cta: "opserax.com besuchen ↗",
+        opserax_demo: "Demo vereinbaren",
+        opserax_img_alt: "Opserax-Dashboard mit KPIs und Trends zu Arbeitsaufträgen",
+        opserax_phone_alt: "Opserax-Mobile-App in der Hand eines Servicetechnikers",
         services_label: "Leistungen",
-        services_title: "Was wir mitbringen",
-        services_sub: "Von der Diagnose bis zur Lieferung \u2014 wir \u00fcbernehmen Verantwortung f\u00fcr die Teile, die die meisten Ingenieure vermeiden.",
-        svc1_title: "Performance-Optimierung",
-        svc1_desc: "Datenfl\u00fcsse \u00fcberdenken, unn\u00f6tige Verarbeitung reduzieren und Komponentengrenzen umstrukturieren, um Ihre Anwendung schneller zu machen \u2014 nicht nur auslieferbar.",
-        svc2_title: "Komplexe Problemdiagnose",
-        svc2_desc: "Kaskadierende Zustandsfehler, Performance-Degradation im gro\u00dfen Ma\u00dfstab, Integrationskonflikte \u2014 wir verfolgen Probleme bis zur Wurzel und implementieren dauerhafte L\u00f6sungen.",
-        svc3_title: "Architektur & Refactoring",
-        svc3_desc: "Legacy-Codebases modernisieren, ohne bestehendes Verhalten zu beeintr\u00e4chtigen. Saubere Architektur unter realen Einschr\u00e4nkungen.",
-        svc4_title: "Full-Stack-Entwicklung",
-        svc4_desc: "End-to-End-Produktentwicklung \u00fcber Geoinformationssysteme, Dokumentengenerierung, Gesch\u00e4ftsplattformen, Authentifizierung und Echtzeit-Datensynchronisation.",
-        svc5_title: "Technische Beratung",
-        svc5_desc: "Strategische Beratung zu Architekturentscheidungen, Tech-Debt-Management und Skalierungsherausforderungen. Wir helfen Teams, bessere Engineering-Entscheidungen zu treffen.",
-        svc6_title: "Team-Integration",
-        svc6_desc: "Erfahren in verteilten, funktions\u00fcbergreifenden Umgebungen mit europ\u00e4ischen und internationalen Teams.",
-        svc7_title: "KI-Produktentwicklung",
-        svc7_desc: "Entwicklung von KI-gest\u00fctzten Produkten mit MCP-Integrationen, API-gesteuerten Workflows, Offline-Modellbereitstellung und ma\u00dfgeschneiderten Modelltraining-Pipelines f\u00fcr reale Anwendungen.",
-        about_label: "\u00dcber uns",
-        about_title: "Softwareentwicklungsteam",
-        about_p1: "Unsere Arbeit liegt an der Schnittstelle zwischen sauberer Architektur und realen Einschr\u00e4nkungen. Wir beheben nicht nur Symptome \u2014 wir verfolgen Probleme bis zur Wurzel und implementieren L\u00f6sungen, die halten.",
-        about_p2: "Wir haben Refactoring-Initiativen geleitet, die Legacy-Codebases modernisieren, ohne bestehendes Verhalten zu beeintr\u00e4chtigen, und wenden konsistente Engineering-Prinzipien unabh\u00e4ngig von der Dom\u00e4ne an.",
-        about_p3: "Diese Vielseitigkeit haben wir bewusst aufgebaut. Die Anpassung an verschiedene technische und gesch\u00e4ftliche Kontexte bei gleichbleibender Engineering-Pr\u00e4zision hat uns zu einem st\u00e4rkeren Team gemacht.",
-        stat_years: "Jahre Erfahrung",
-        stat_projects: "Projekte geliefert",
-        stat_location: "Team in ganz Europa",
-        tech_label: "Technologien",
-        tech_title: "Werkzeuge, mit denen wir arbeiten",
-        tech_sub: "Dom\u00e4nen-unabh\u00e4ngiges Engineering mit Fokus auf das, was funktioniert.",
+        services_title: "Produkte nach Maß — so gebaut wie unsere eigenen.",
+        services_sub: "Dasselbe Engineering wie bei Opserax, angewendet auf Ihr Problem. Wir übernehmen Verantwortung vom ersten Gespräch bis zum Betrieb — und bleiben danach an Bord.",
+        svc1_title: "Produktentwicklung",
+        svc1_desc: "Von der Idee bis zum Betrieb: Discovery, MVP, Launch und kontinuierliche Weiterentwicklung. Ein kleines Senior-Team, das den Code schreibt und für das Ergebnis einsteht.",
+        svc2_title: "SaaS- & Multi-Tenant-Plattformen",
+        svc2_desc: "Mandantentrennung, eigene Identität und SSO pro Kunde, Rollen und Rechte, abrechnungsfähige Pläne und das Betriebs-Tooling, das echtes SaaS braucht.",
+        svc3_title: "Offline-first-Mobile-Apps",
+        svc3_desc: "iOS- und Android-Apps für Außendienstteams, die ohne Netz weiterarbeiten und sicher synchronisieren — inklusive Fotos, Unterschriften und QR-Codes.",
+        svc4_title: "Integrationen & APIs",
+        svc4_desc: "ERPs, Service Desks, Identity Provider und BI. OAuth2, signierte Webhooks, Queues und Audit-Logs — damit Ihre Systeme endlich miteinander sprechen.",
+        svc5_title: "KI in echten Produkten",
+        svc5_desc: "LLM-Funktionen, Agenten und MCP-Integrationen im Produktivbetrieb — mit Leitplanken, Evaluierung und kontrollierten Kosten, nicht nur Demos.",
+        svc6_title: "Architektur, Performance & Rettung",
+        svc6_desc: "Schwierige Probleme diagnostizieren, Legacy-Code modernisieren ohne Verhalten zu brechen und Cloud-Kosten senken. Ursachen statt Workarounds.",
+        process_label: "Arbeitsweise",
+        process_title: "Kurze Zyklen, lauffähige Software, keine Überraschungen.",
+        process_sub: "Wir arbeiten wie ein Produktteam, nicht wie eine Ticket-Warteschlange. Sie sehen den Fortschritt in jedem Zyklus in einer echten Umgebung.",
+        step1_title: "Discovery",
+        step1_desc: "Wir verstehen Abläufe, Nutzer und Rahmenbedingungen und definieren gemeinsam, was Erfolg bedeutet.",
+        step2_title: "Entwicklung in Zyklen",
+        step2_desc: "Kleine, häufige Lieferungen, die Sie nutzen und prüfen können — mit Tests und CI ab dem ersten Tag.",
+        step3_title: "Go-live",
+        step3_desc: "Infrastruktur, Monitoring, Sicherheit und Datenmigration erledigt — der Launch wird zur Nebensache.",
+        step4_title: "Betreiben & weiterentwickeln",
+        step4_desc: "Wir betreuen, was wir liefern, und verbessern es weiter — genauso wie Opserax.",
+        about_label: "Über uns",
+        about_title: "Ein Softwarehaus, das sein eigenes Produkt betreibt.",
+        about_p1: "Codebethel wurde 2018 gegründet, um Software nach Maß für Unternehmen zu entwickeln, die mehr brauchen als einen Dienstleister: ein Team, das das Geschäft versteht und Verantwortung für das Ergebnis übernimmt.",
+        about_p2: "Opserax selbst zu betreiben hält uns ehrlich. Täglich erleben wir, was unsere Kunden erleben — Verfügbarkeit, Support, Integrationen, Kosten und Nutzer im Außendienst — und diese Erfahrung fließt direkt in unsere Kundenprojekte.",
+        about_p3: "Möchten Sie unsere Arbeit im Einsatz sehen?",
+        about_link: "opserax.com öffnen ↗",
+        stat_founded: "Gegründet",
+        stat_years: "Jahre Engineering-Erfahrung",
+        stat_projects: "Gelieferte Projekte",
+        stat_location: "Kunden in Brasilien, Europa und darüber hinaus",
+        tech_label: "Stack",
+        tech_title: "Werkzeuge, die wir produktiv einsetzen",
+        tech_sub: "Pragmatische Entscheidungen, passend zum Problem — derselbe Stack, auf dem Opserax läuft.",
+        tech_g1: "Backend",
+        tech_g2: "Web & Mobile",
+        tech_g3: "Daten & Infrastruktur",
+        tech_g4: "Identität, Integrationen & KI",
         contact_label: "Kontakt",
-        contact_title: "Lassen Sie uns etwas Gro\u00dfartiges bauen",
-        contact_sub: "Haben Sie ein komplexes Projekt oder brauchen ein Team, das Verantwortung \u00fcbernimmt? Melden Sie sich.",
+        contact_title: "Erzählen Sie uns, was Sie bauen möchten.",
+        contact_sub: "Ein neues Produkt, eine Plattform, die skalieren muss, oder ein System, das mit allen anderen sprechen soll — wir antworten innerhalb eines Werktags.",
         form_name: "Name",
         form_name_ph: "Ihr Name",
+        form_company: "Unternehmen",
+        form_company_ph: "Unternehmen (optional)",
+        form_topic: "Betreff",
+        form_topic_project: "Ein Softwareprojekt",
+        form_topic_opserax: "Opserax",
+        form_topic_other: "Etwas anderes",
         form_message: "Nachricht",
-        form_message_ph: "Erz\u00e4hlen Sie uns von Ihrem Projekt...",
+        form_message_ph: "Erzählen Sie uns von Ihrem Projekt...",
         form_submit: "Nachricht senden",
-        info_location: "Standort",
-        info_location_desc: "Verteiltes Team in ganz Europa",
-        info_availability: "Verf\u00fcgbarkeit",
-        info_availability_desc: "Offen f\u00fcr Freelance-, Vertrags- und Beratungsengagements mit europ\u00e4ischen und internationalen Teams.",
+        form_note: "Öffnet Ihr E-Mail-Programm mit der fertigen Nachricht.",
         info_whatsapp: "Nachricht auf WhatsApp",
-        info_linkedin: "Auf LinkedIn verbinden",
-        footer: "\u00a9 2026 Codebethel. Alle Rechte vorbehalten."
+        info_opserax: "Interesse an Opserax?",
+        info_opserax_link: "Demo auf opserax.com vereinbaren ↗",
+        info_location: "Wo wir arbeiten",
+        info_location_desc: "Remote-first, mit Kunden in Brasilien, Europa und darüber hinaus.",
+        footer_tagline: "Softwarehaus und Produktstudio seit 2018. Die Macher von Opserax.",
+        footer_demo: "Demo vereinbaren",
+        footer_security: "Sicherheit",
+        footer: "© 2026 Codebethel. Alle Rechte vorbehalten.",
+        footer_product: "— Software für Facility- und Instandhaltungsmanagement von Codebethel",
+        mail_subject: "Kontakt über codebethel.com"
       }
     };
 
@@ -941,33 +1540,39 @@
     function setLang(lang, userChose) {
       currentLang = lang;
       document.documentElement.lang = lang;
+      const t = translations[lang];
 
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
+        if (t[key]) el.textContent = t[key];
+      });
+
+      // Only for keys whose markup lives in the static dictionary above
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (t[key]) el.innerHTML = t[key];
       });
 
       document.querySelectorAll('[data-i18n-href]').forEach(el => {
         const key = el.getAttribute('data-i18n-href');
-        if (translations[lang][key]) {
-          el.href = translations[lang][key];
-        }
+        if (t[key]) el.href = t[key];
       });
 
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
-        if (translations[lang][key]) {
-          el.placeholder = translations[lang][key];
-        }
+        if (t[key]) el.placeholder = t[key];
+      });
+
+      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        if (t[key]) el.alt = t[key];
       });
 
       const titles = {
-        en: 'Codebethel \u2014 Software Development & Consulting',
-        pt: 'Codebethel \u2014 Desenvolvimento de Software & Consultoria',
-        "pt-BR": 'Codebethel \u2014 Desenvolvimento de Software & Consultoria',
-        de: 'Codebethel \u2014 Softwareentwicklung & Beratung'
+        en: 'Codebethel — Software House & Product Studio · Creators of Opserax',
+        pt: 'Codebethel — Software House & Estúdio de Produto · Criadores do Opserax',
+        "pt-BR": 'Codebethel — Software House & Estúdio de Produto · Criadores do Opserax',
+        de: 'Codebethel — Softwarehaus & Produktstudio · Die Macher von Opserax'
       };
       document.title = titles[lang];
 
@@ -980,6 +1585,26 @@
         try { localStorage.setItem('cb_lang', lang); } catch(e) {}
       }
     }
+
+    // ===== CONTACT FORM (mailto) =====
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const f = e.target;
+      const topic = f.topic.options[f.topic.selectedIndex].text;
+      const subject = translations[currentLang].mail_subject + ' — ' + topic;
+      const body = [
+        f.message.value,
+        '',
+        '— ' + f.name.value + (f.company.value ? ' (' + f.company.value + ')' : '')
+      ].join('\n');
+      window.location.href = 'mailto:angelo@codebethel.com?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+
+    // Close mobile menu after picking a link
+    document.querySelectorAll('#navLinks a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('show'));
+    });
 
     // ===== INIT =====
     (function init() {
