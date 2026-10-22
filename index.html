@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#0b0b10">
+  <meta name="theme-color" content="#0b1120">
 
   <!-- Hreflang for multilingual SEO -->
   <link rel="alternate" hreflang="en" href="https://codebethel.com/">
@@ -34,11 +34,11 @@
   <meta property="og:locale:alternate" content="pt_BR">
   <meta property="og:locale:alternate" content="de_DE">
   <meta property="og:site_name" content="Codebethel">
-  <meta property="og:image" content="https://codebethel.com/logo.png">
+  <meta property="og:image" content="https://codebethel.com/icon.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://codebethel.com/logo.png">
+  <meta name="twitter:image" content="https://codebethel.com/icon.png">
   <meta name="twitter:title" content="Codebethel — Software House & Product Studio">
   <meta name="twitter:description" content="We design, build and operate production software on demand. Creators of Opserax.">
 
@@ -52,7 +52,7 @@
         "@id": "https://codebethel.com/#org",
         "name": "Codebethel",
         "url": "https://codebethel.com",
-        "logo": "https://codebethel.com/logo.png",
+        "logo": "https://codebethel.com/icon.png",
         "foundingDate": "2018",
         "description": "Software house and product studio. We design, build and operate production software on demand, and we are the creators of Opserax.",
         "email": "angelo@codebethel.com",
@@ -83,25 +83,32 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0b0b10;
-      --bg-card: #12121a;
-      --bg-elev: #171722;
-      --border: #22222f;
-      --border-strong: #2e2e3e;
-      --text: #e4e4e7;
-      --text-muted: #9ca3af;
-      --accent: #7c6cf6;
-      --accent-soft: #a78bff;
-      --accent-glow: rgba(124, 108, 246, 0.16);
+      /* Codebethel brand: navy #0F172A, blue #2563EB (light bg) / #3B82F6 (dark bg) */
+      --navy: #0f172a;
+      --bg: #0b1120;
+      --bg-card: #0f172a;
+      --bg-elev: #131c31;
+      --border: #1e293b;
+      --border-strong: #2a3650;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-soft: #60a5fa;
+      --accent-glow: rgba(59, 130, 246, 0.16);
+      /* Opserax sibling brand */
+      --opx: #7c6cf6;
+      --opx-soft: #a78bff;
+      --opx-glow: rgba(124, 108, 246, 0.16);
       --amber: #e08a2c;
       --amber-glow: rgba(224, 138, 44, 0.16);
       --white: #ffffff;
       --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+      --font-brand: 'Montserrat', 'Inter', system-ui, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, monospace;
     }
 
@@ -127,7 +134,7 @@
       z-index: 100;
       padding: 0.9rem 2rem;
       backdrop-filter: blur(16px);
-      background: rgba(11, 11, 16, 0.82);
+      background: rgba(11, 17, 32, 0.82);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
@@ -141,16 +148,17 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 700;
+      gap: 0.6rem;
+      font-family: var(--font-brand);
+      font-size: 1.3rem;
+      font-weight: 600;
       color: var(--white);
       text-decoration: none;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
     }
-    .logo img { height: 32px; width: auto; }
-    .logo span { color: var(--accent); }
+    .logo svg { height: 26px; width: 48px; } /* symbol viewBox is 767×417 */
+    .logo .wordmark { color: var(--white); }
+    .logo .wordmark span { color: var(--accent); }
 
     .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
     .nav-links a {
@@ -158,6 +166,7 @@
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 500;
+      white-space: nowrap;
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--white); }
@@ -170,7 +179,7 @@
       border-radius: 999px;
       color: var(--text);
     }
-    .nav-links a.nav-opserax:hover { border-color: var(--accent); color: var(--white); }
+    .nav-links a.nav-opserax:hover { border-color: var(--opx); color: var(--white); }
     .nav-opserax svg { width: 16px; height: 16px; }
 
     /* ---------- LANGUAGE SWITCHER ---------- */
@@ -312,13 +321,13 @@
       padding: 0.6rem 1rem 0.6rem 0.6rem;
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: rgba(18, 18, 26, 0.7);
+      background: rgba(15, 23, 42, 0.7);
       text-decoration: none;
       color: var(--text-muted);
       font-size: 0.9rem;
       transition: border-color 0.2s, color 0.2s;
     }
-    .hero-product:hover { border-color: var(--accent); color: var(--white); }
+    .hero-product:hover { border-color: var(--opx); color: var(--white); }
     .hero-product .mark {
       width: 36px; height: 36px;
       border-radius: 8px;
@@ -361,6 +370,9 @@
     .opserax {
       position: relative;
       overflow: hidden;
+      --accent: var(--opx);
+      --accent-soft: var(--opx-soft);
+      --accent-glow: var(--opx-glow);
     }
     .opserax::before {
       content: '';
@@ -712,7 +724,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(11, 11, 16, 0.97);
+        background: rgba(11, 17, 32, 0.97);
         padding: 1.5rem 2rem;
         border-bottom: 1px solid var(--border);
         gap: 1rem;
@@ -737,8 +749,14 @@
 </head>
 <body>
 
-  <!-- Opserax mark (dark-mode variant), reused via <use> -->
+  <!-- Codebethel symbol and Opserax mark (dark-background variants), reused via <use> -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="cb-symbol" viewBox="128 255 767 417">
+      <path fill="#FFFFFF" fill-rule="evenodd" d="M511.5,255 L639,340 L639,410 L384,410 L384,340 Z M455,410 L455,380 C455,380 463,355 511.5,330 C560.0,355 568,380 568,380 L568,410 Z"/>
+      <path fill="#FFFFFF" d="M384,428 L454,428 L454,672 L384,646 Z M569,428 L639,428 L639,646 L569,672 Z"/>
+      <path fill="#3B82F6" d="M344,321 L128,465 L128,496 L344,640 L344,581 L194,481 L344,381 Z"/>
+      <path fill="#3B82F6" d="M679,321 L895,465 L895,496 L679,640 L679,581 L829,481 L679,381 Z"/>
+    </symbol>
     <symbol id="opserax-mark" viewBox="0 0 100 100">
       <path d="M28 20 L10 50 L28 80 L22 76 L16 50 L22 24 Z" fill="#A78BFF"/>
       <path d="M72 20 L90 50 L72 80 L78 76 L84 50 L78 24 Z" fill="#A78BFF"/>
@@ -761,7 +779,7 @@
   <header>
   <nav>
     <div class="nav-inner">
-      <a href="#" class="logo"><img src="/logo.png" alt="Codebethel logo">code<span>bethel</span></a>
+      <a href="#" class="logo" aria-label="Codebethel"><svg aria-hidden="true"><use href="#cb-symbol"/></svg><span class="wordmark">code<span>bethel</span></span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#opserax" data-i18n="nav_product">Opserax</a></li>
         <li><a href="#services" data-i18n="nav_services">Services</a></li>
@@ -1074,7 +1092,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo"><img src="/logo.png" alt="Codebethel logo">code<span>bethel</span></a>
+        <a href="#" class="logo" aria-label="Codebethel"><svg aria-hidden="true"><use href="#cb-symbol"/></svg><span class="wordmark">code<span>bethel</span></span></a>
         <p data-i18n="footer_tagline">Software house and product studio since 2018. Creators of Opserax.</p>
       </div>
       <div>
